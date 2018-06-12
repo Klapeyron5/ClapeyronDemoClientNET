@@ -1,0 +1,8 @@
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework\bin\Debug\MetroFramework.dll
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework\bin\Debug\MetroFramework.pdb
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework\obj\Debug\MetroFramework.Properties.Resources.resources
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework\obj\Debug\MetroFramework.csproj.GenerateResource.Cache
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework\obj\Debug\MetroFramework.csproj.CoreCompileInputs.cache
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework\obj\Debug\MetroFramework.dll
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework\obj\Debug\MetroFramework.pdb
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework\obj\Debug\MetroFramework.csprojResolveAssemblyReference.cache

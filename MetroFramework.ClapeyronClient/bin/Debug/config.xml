@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <networking>
+    <robot_ip>192.168.8.229</robot_ip>
+    <robot_port>49101</robot_port>
+    <client_port>49100</client_port>
+    <cam_string>http://192.168.8.1:8080/?action=snapshot</cam_string>
+  </networking>
+  <interface>
+    <color>2</color>
+  </interface>
+</options>
