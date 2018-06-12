@@ -123,13 +123,13 @@ namespace MetroFramework.ClapeyronClient
             while (!streamer.is_terminated)
             {
                 CamStreamer.shot(metroTextBox4.Text,this);
-                pictureBox2.Image = CamStreamer.image;
+                telepresencePictureBoxCamera.Image = CamStreamer.image;
                 streamer.ev_suspend.WaitOne();
 
                 ticker++;
                 if ((cv_is_on)&(ticker%10 == 0))
                 {
-                    Dispatcher.Invoke(this, () => { AnalizeImage((Bitmap)pictureBox2.Image); });
+                    Dispatcher.Invoke(this, () => { AnalizeImage((Bitmap)telepresencePictureBoxCamera.Image); });
                     ticker = 0;
                 }
 
@@ -187,20 +187,20 @@ namespace MetroFramework.ClapeyronClient
 
         private void metroToggle4_CheckedChanged(object sender, EventArgs e)
         {
-            if (metroToggle4.Checked)
+            if (telepresenceMetroToggleConnection.Checked)
             {
-                metroProgressSpinner3.Visible = true;
-                label16.Text = "Connecting..";
+                metroProgressSpinner.Visible = true;
+                telepresenceLabelLogLeftBottom.Text = "Connecting..";
                 cmd.send("INIT");
 
                 Console.WriteLine("tgl_on"); //debug
             }
             else
             {
-                metroProgressSpinner3.Visible = false;
-                label16.Text = "Canceled";
-                label3.Text = "not connected";
-                label3.ForeColor = Color.LightSalmon;
+                metroProgressSpinner.Visible = false;
+                telepresenceLabelLogLeftBottom.Text = "Canceled";
+                telepresenceLabelConnectionStatus.Text = "not connected";
+                telepresenceLabelConnectionStatus.ForeColor = Color.LightSalmon;
 
                 cmd.send("WASD_OFF");
                 cmd.send("STREAM_OFF");
@@ -214,10 +214,10 @@ namespace MetroFramework.ClapeyronClient
 
         private void metroToggle5_CheckedChanged(object sender, EventArgs e)
         {
-            if (metroToggle5.Checked)
+            if (telepresenceMetroToggleWASD.Checked)
             {
                 cmd.send("WASD_ON");
-                label16.Text = "WASD on";
+                telepresenceLabelLogLeftBottom.Text = "WASD on";
                 panel2.Visible = true;
                 panel3.Visible = true;
                 panel4.Visible = true;
@@ -226,7 +226,7 @@ namespace MetroFramework.ClapeyronClient
             else
             {
                 cmd.send("WASD_OFF");
-                label16.Text = "WASD off";
+                telepresenceLabelLogLeftBottom.Text = "WASD off";
                 panel2.Visible = false;
                 panel3.Visible = false;
                 panel4.Visible = false;
@@ -236,31 +236,31 @@ namespace MetroFramework.ClapeyronClient
 
         private void metroToggle6_CheckedChanged(object sender, EventArgs e)
         {
-            if (metroToggle6.Checked)
+            if (telepresenceMetroToggleCamera.Checked)
             {
                 streamer.Resume();
-                label16.Text = "Stream on";
+                telepresenceLabelLogLeftBottom.Text = "Stream on";
             }
             else
             {
                 streamer.Suspend();
                 ThreadRunner cleaner = new ThreadRunner(new ThreadStart(clearPictureBox));
-                label16.Text = "Stream off";
+                telepresenceLabelLogLeftBottom.Text = "Stream off";
             }
         }
 
         private void metroToggle1_CheckedChanged(object sender, EventArgs e)
         {
-            if (metroToggle1.Checked)
+            if (telepresenceMetroToggleGrasper.Checked)
             {
                 cmd.send("GRASP_ON");
-                label16.Text = "Grasp on";
+                telepresenceLabelLogLeftBottom.Text = "Grasp on";
                 label2.Visible = true;
             }
             else
             {
                 cmd.send("GRASP_OFF");
-                label16.Text = "Grasp off";
+                telepresenceLabelLogLeftBottom.Text = "Grasp off";
                 label2.Visible = false;
             }
         }
@@ -269,17 +269,17 @@ namespace MetroFramework.ClapeyronClient
 
         private void metroToggle2_CheckedChanged(object sender, EventArgs e)
         {
-            if (metroToggle2.Checked)
+            if (telepresenceMetroToggleCV.Checked)
             {
                 cv_is_on = true;
-                label16.Text = "CV on";
+                telepresenceLabelLogLeftBottom.Text = "CV on";
                 label32.Visible = true;
                 label32.Text = "May contain:";
             }
             else
             {
                 cv_is_on = false;
-                label16.Text = "CV off";
+                telepresenceLabelLogLeftBottom.Text = "CV off";
                 label32.Visible = false;
             }
         }
@@ -287,39 +287,39 @@ namespace MetroFramework.ClapeyronClient
         //gui accessing methods
         public void setLabel16(string text)
         {
-            label16.Text = text;
+            telepresenceLabelLogLeftBottom.Text = text;
         }
         public void setLabel6(string text)
         {
-            label6.Text = text;
+            telepresenceLabelHardwareVersion.Text = text;
         }
         public void setLabel3(string text)
         {
-            label3.Text = text;
+            telepresenceLabelConnectionStatus.Text = text;
         }
         public void setLabel7(string text)
         {
-            label7.Text = text;
+            telepresenceLabelSoftwareVersion.Text = text;
         }
         public void setLabel11(string text)
         {
-            label11.Text = text;
+            telepresenceLabelBattery.Text = text;
         }
         public void setLabel3Color(Color color)
         {
-            label3.ForeColor = color;
+            telepresenceLabelConnectionStatus.ForeColor = color;
         }
         public void setLabel11Color(Color color)
         {
-            label11.ForeColor = color;
+            telepresenceLabelBattery.ForeColor = color;
         }
         public void setSpinnerState(bool state)
         {
-            metroProgressSpinner3.Visible = state;
+            metroProgressSpinner.Visible = state;
         }
         public void setPictureBox(Bitmap bmp)
         {
-            pictureBox2.Image = bmp;
+            telepresencePictureBoxCamera.Image = bmp;
         }
         public void setHallValue(string value)
         {
@@ -328,7 +328,7 @@ namespace MetroFramework.ClapeyronClient
         public void clearPictureBox()
         {
             Thread.Sleep(500);
-            pictureBox2.Image = new Bitmap(640, 480);
+            telepresencePictureBoxCamera.Image = new Bitmap(640, 480);
         }
 
         // robot control via keyboard

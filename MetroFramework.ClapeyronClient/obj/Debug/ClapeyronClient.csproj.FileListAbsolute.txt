@@ -10,3 +10,15 @@ C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework.ClapeyronCl
 C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework.ClapeyronClient\obj\Debug\ClapeyronClient.csproj.CoreCompileInputs.cache
 C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework.ClapeyronClient\obj\Debug\MetroFramework.Demo.exe
 C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework.ClapeyronClient\obj\Debug\MetroFramework.Demo.pdb
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\bin\Debug\MetroFramework.Demo.exe.config
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\bin\Debug\MetroFramework.Demo.exe
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\bin\Debug\MetroFramework.Demo.pdb
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\bin\Debug\MetroFramework.dll
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\bin\Debug\MetroFramework.pdb
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\obj\Debug\ClapeyronClient.csprojResolveAssemblyReference.cache
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\obj\Debug\MetroFramework.ClapeyronClient.MainForm.resources
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\obj\Debug\MetroFramework.Demo.Properties.Resources.resources
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\obj\Debug\ClapeyronClient.csproj.GenerateResource.Cache
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\obj\Debug\ClapeyronClient.csproj.CoreCompileInputs.cache
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\obj\Debug\MetroFramework.Demo.exe
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\obj\Debug\MetroFramework.Demo.pdb

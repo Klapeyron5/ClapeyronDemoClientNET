@@ -33,28 +33,28 @@
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroToggle1 = new MetroFramework.Controls.MetroToggle();
+            this.telepresenceMetroToggleGrasper = new MetroFramework.Controls.MetroToggle();
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager();
             this.label26 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.telepresenceLabelBattery = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.telepresenceLabelSoftwareVersion = new System.Windows.Forms.Label();
+            this.telepresenceLabelHardwareVersion = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.metroToggle4 = new MetroFramework.Controls.MetroToggle();
-            this.label3 = new System.Windows.Forms.Label();
-            this.metroToggle5 = new MetroFramework.Controls.MetroToggle();
+            this.telepresenceMetroToggleConnection = new MetroFramework.Controls.MetroToggle();
+            this.telepresenceLabelConnectionStatus = new System.Windows.Forms.Label();
+            this.telepresenceMetroToggleWASD = new MetroFramework.Controls.MetroToggle();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.metroToggle6 = new MetroFramework.Controls.MetroToggle();
-            this.metroToggle2 = new MetroFramework.Controls.MetroToggle();
+            this.telepresenceMetroToggleCamera = new MetroFramework.Controls.MetroToggle();
+            this.telepresenceMetroToggleCV = new MetroFramework.Controls.MetroToggle();
             this.label27 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label16 = new System.Windows.Forms.Label();
+            this.telepresenceLabelLogLeftBottom = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroProgressSpinner3 = new MetroFramework.Controls.MetroProgressSpinner();
+            this.metroProgressSpinner = new MetroFramework.Controls.MetroProgressSpinner();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label32 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.telepresencePictureBoxCamera = new System.Windows.Forms.PictureBox();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
@@ -120,7 +120,7 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telepresencePictureBoxCamera)).BeginInit();
             this.metroTabPage4.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
@@ -212,22 +212,22 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.Controls.Add(this.metroToggle1, 1, 9);
+            this.tableLayoutPanel2.Controls.Add(this.telepresenceMetroToggleGrasper, 1, 9);
             this.tableLayoutPanel2.Controls.Add(this.label26, 0, 9);
-            this.tableLayoutPanel2.Controls.Add(this.label11, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.telepresenceLabelBattery, 1, 6);
             this.tableLayoutPanel2.Controls.Add(this.label10, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.label5, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label7, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label6, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.telepresenceLabelSoftwareVersion, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.telepresenceLabelHardwareVersion, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.metroToggle4, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.metroToggle5, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.telepresenceMetroToggleConnection, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.telepresenceLabelConnectionStatus, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.telepresenceMetroToggleWASD, 1, 8);
             this.tableLayoutPanel2.Controls.Add(this.label8, 0, 8);
             this.tableLayoutPanel2.Controls.Add(this.label9, 0, 10);
-            this.tableLayoutPanel2.Controls.Add(this.metroToggle6, 1, 10);
-            this.tableLayoutPanel2.Controls.Add(this.metroToggle2, 1, 11);
+            this.tableLayoutPanel2.Controls.Add(this.telepresenceMetroToggleCamera, 1, 10);
+            this.tableLayoutPanel2.Controls.Add(this.telepresenceMetroToggleCV, 1, 11);
             this.tableLayoutPanel2.Controls.Add(this.label27, 0, 11);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
@@ -249,25 +249,25 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(219, 415);
             this.tableLayoutPanel2.TabIndex = 33;
             // 
-            // metroToggle1
+            // telepresenceMetroToggleGrasper
             // 
-            this.metroToggle1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroToggle1.AutoSize = true;
-            this.metroToggle1.CustomBackground = false;
-            this.metroToggle1.DisplayStatus = false;
-            this.metroToggle1.FontSize = MetroFramework.MetroLinkSize.Small;
-            this.metroToggle1.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.metroToggle1.Location = new System.Drawing.Point(105, 183);
-            this.metroToggle1.Name = "metroToggle1";
-            this.metroToggle1.Size = new System.Drawing.Size(50, 14);
-            this.metroToggle1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroToggle1.StyleManager = this.metroStyleManager;
-            this.metroToggle1.TabIndex = 16;
-            this.metroToggle1.Text = "Off";
-            this.metroToggle1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroToggle1.UseStyleColors = true;
-            this.metroToggle1.UseVisualStyleBackColor = true;
-            this.metroToggle1.CheckedChanged += new System.EventHandler(this.metroToggle1_CheckedChanged);
+            this.telepresenceMetroToggleGrasper.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.telepresenceMetroToggleGrasper.AutoSize = true;
+            this.telepresenceMetroToggleGrasper.CustomBackground = false;
+            this.telepresenceMetroToggleGrasper.DisplayStatus = false;
+            this.telepresenceMetroToggleGrasper.FontSize = MetroFramework.MetroLinkSize.Small;
+            this.telepresenceMetroToggleGrasper.FontWeight = MetroFramework.MetroLinkWeight.Regular;
+            this.telepresenceMetroToggleGrasper.Location = new System.Drawing.Point(105, 183);
+            this.telepresenceMetroToggleGrasper.Name = "telepresenceMetroToggleGrasper";
+            this.telepresenceMetroToggleGrasper.Size = new System.Drawing.Size(50, 14);
+            this.telepresenceMetroToggleGrasper.Style = MetroFramework.MetroColorStyle.Orange;
+            this.telepresenceMetroToggleGrasper.StyleManager = this.metroStyleManager;
+            this.telepresenceMetroToggleGrasper.TabIndex = 16;
+            this.telepresenceMetroToggleGrasper.Text = "Off";
+            this.telepresenceMetroToggleGrasper.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.telepresenceMetroToggleGrasper.UseStyleColors = true;
+            this.telepresenceMetroToggleGrasper.UseVisualStyleBackColor = true;
+            this.telepresenceMetroToggleGrasper.CheckedChanged += new System.EventHandler(this.metroToggle1_CheckedChanged);
             // 
             // metroStyleManager
             // 
@@ -288,18 +288,18 @@
             this.label26.Text = "Grasper:";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label11
+            // telepresenceLabelBattery
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label11.Location = new System.Drawing.Point(111, 120);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(38, 19);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "none";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.telepresenceLabelBattery.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.telepresenceLabelBattery.AutoSize = true;
+            this.telepresenceLabelBattery.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.telepresenceLabelBattery.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.telepresenceLabelBattery.Location = new System.Drawing.Point(111, 120);
+            this.telepresenceLabelBattery.Name = "telepresenceLabelBattery";
+            this.telepresenceLabelBattery.Size = new System.Drawing.Size(38, 19);
+            this.telepresenceLabelBattery.TabIndex = 5;
+            this.telepresenceLabelBattery.Text = "none";
+            this.telepresenceLabelBattery.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
@@ -327,31 +327,31 @@
             this.label5.Text = "Software:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // telepresenceLabelSoftwareVersion
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label7.Location = new System.Drawing.Point(111, 100);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 19);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "none";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.telepresenceLabelSoftwareVersion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.telepresenceLabelSoftwareVersion.AutoSize = true;
+            this.telepresenceLabelSoftwareVersion.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.telepresenceLabelSoftwareVersion.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.telepresenceLabelSoftwareVersion.Location = new System.Drawing.Point(111, 100);
+            this.telepresenceLabelSoftwareVersion.Name = "telepresenceLabelSoftwareVersion";
+            this.telepresenceLabelSoftwareVersion.Size = new System.Drawing.Size(38, 19);
+            this.telepresenceLabelSoftwareVersion.TabIndex = 4;
+            this.telepresenceLabelSoftwareVersion.Text = "none";
+            this.telepresenceLabelSoftwareVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // telepresenceLabelHardwareVersion
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label6.Location = new System.Drawing.Point(111, 80);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 19);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "none";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.telepresenceLabelHardwareVersion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.telepresenceLabelHardwareVersion.AutoSize = true;
+            this.telepresenceLabelHardwareVersion.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.telepresenceLabelHardwareVersion.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.telepresenceLabelHardwareVersion.Location = new System.Drawing.Point(111, 80);
+            this.telepresenceLabelHardwareVersion.Name = "telepresenceLabelHardwareVersion";
+            this.telepresenceLabelHardwareVersion.Size = new System.Drawing.Size(38, 19);
+            this.telepresenceLabelHardwareVersion.TabIndex = 3;
+            this.telepresenceLabelHardwareVersion.Text = "none";
+            this.telepresenceLabelHardwareVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -379,58 +379,58 @@
             this.label1.Text = "Status:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroToggle4
+            // telepresenceMetroToggleConnection
             // 
-            this.metroToggle4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroToggle4.AutoSize = true;
-            this.metroToggle4.CustomBackground = false;
-            this.metroToggle4.DisplayStatus = true;
-            this.metroToggle4.FontSize = MetroFramework.MetroLinkSize.Small;
-            this.metroToggle4.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.metroToggle4.Location = new System.Drawing.Point(90, 43);
-            this.metroToggle4.Name = "metroToggle4";
-            this.metroToggle4.Size = new System.Drawing.Size(80, 14);
-            this.metroToggle4.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroToggle4.StyleManager = this.metroStyleManager;
-            this.metroToggle4.TabIndex = 4;
-            this.metroToggle4.Text = "Off";
-            this.metroToggle4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroToggle4.UseStyleColors = false;
-            this.metroToggle4.UseVisualStyleBackColor = true;
-            this.metroToggle4.CheckedChanged += new System.EventHandler(this.metroToggle4_CheckedChanged);
+            this.telepresenceMetroToggleConnection.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.telepresenceMetroToggleConnection.AutoSize = true;
+            this.telepresenceMetroToggleConnection.CustomBackground = false;
+            this.telepresenceMetroToggleConnection.DisplayStatus = true;
+            this.telepresenceMetroToggleConnection.FontSize = MetroFramework.MetroLinkSize.Small;
+            this.telepresenceMetroToggleConnection.FontWeight = MetroFramework.MetroLinkWeight.Regular;
+            this.telepresenceMetroToggleConnection.Location = new System.Drawing.Point(90, 43);
+            this.telepresenceMetroToggleConnection.Name = "telepresenceMetroToggleConnection";
+            this.telepresenceMetroToggleConnection.Size = new System.Drawing.Size(80, 14);
+            this.telepresenceMetroToggleConnection.Style = MetroFramework.MetroColorStyle.Orange;
+            this.telepresenceMetroToggleConnection.StyleManager = this.metroStyleManager;
+            this.telepresenceMetroToggleConnection.TabIndex = 4;
+            this.telepresenceMetroToggleConnection.Text = "Off";
+            this.telepresenceMetroToggleConnection.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.telepresenceMetroToggleConnection.UseStyleColors = false;
+            this.telepresenceMetroToggleConnection.UseVisualStyleBackColor = true;
+            this.telepresenceMetroToggleConnection.CheckedChanged += new System.EventHandler(this.metroToggle4_CheckedChanged);
             // 
-            // label3
+            // telepresenceLabelConnectionStatus
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.LightSalmon;
-            this.label3.Location = new System.Drawing.Point(84, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 19);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "not connected";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.telepresenceLabelConnectionStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.telepresenceLabelConnectionStatus.AutoSize = true;
+            this.telepresenceLabelConnectionStatus.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.telepresenceLabelConnectionStatus.ForeColor = System.Drawing.Color.LightSalmon;
+            this.telepresenceLabelConnectionStatus.Location = new System.Drawing.Point(84, 20);
+            this.telepresenceLabelConnectionStatus.Name = "telepresenceLabelConnectionStatus";
+            this.telepresenceLabelConnectionStatus.Size = new System.Drawing.Size(92, 19);
+            this.telepresenceLabelConnectionStatus.TabIndex = 3;
+            this.telepresenceLabelConnectionStatus.Text = "not connected";
+            this.telepresenceLabelConnectionStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroToggle5
+            // telepresenceMetroToggleWASD
             // 
-            this.metroToggle5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroToggle5.AutoSize = true;
-            this.metroToggle5.CustomBackground = false;
-            this.metroToggle5.DisplayStatus = false;
-            this.metroToggle5.FontSize = MetroFramework.MetroLinkSize.Small;
-            this.metroToggle5.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.metroToggle5.Location = new System.Drawing.Point(105, 163);
-            this.metroToggle5.Name = "metroToggle5";
-            this.metroToggle5.Size = new System.Drawing.Size(50, 14);
-            this.metroToggle5.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroToggle5.StyleManager = this.metroStyleManager;
-            this.metroToggle5.TabIndex = 15;
-            this.metroToggle5.Text = "Off";
-            this.metroToggle5.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroToggle5.UseStyleColors = true;
-            this.metroToggle5.UseVisualStyleBackColor = true;
-            this.metroToggle5.CheckedChanged += new System.EventHandler(this.metroToggle5_CheckedChanged);
+            this.telepresenceMetroToggleWASD.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.telepresenceMetroToggleWASD.AutoSize = true;
+            this.telepresenceMetroToggleWASD.CustomBackground = false;
+            this.telepresenceMetroToggleWASD.DisplayStatus = false;
+            this.telepresenceMetroToggleWASD.FontSize = MetroFramework.MetroLinkSize.Small;
+            this.telepresenceMetroToggleWASD.FontWeight = MetroFramework.MetroLinkWeight.Regular;
+            this.telepresenceMetroToggleWASD.Location = new System.Drawing.Point(105, 163);
+            this.telepresenceMetroToggleWASD.Name = "telepresenceMetroToggleWASD";
+            this.telepresenceMetroToggleWASD.Size = new System.Drawing.Size(50, 14);
+            this.telepresenceMetroToggleWASD.Style = MetroFramework.MetroColorStyle.Orange;
+            this.telepresenceMetroToggleWASD.StyleManager = this.metroStyleManager;
+            this.telepresenceMetroToggleWASD.TabIndex = 15;
+            this.telepresenceMetroToggleWASD.Text = "Off";
+            this.telepresenceMetroToggleWASD.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.telepresenceMetroToggleWASD.UseStyleColors = true;
+            this.telepresenceMetroToggleWASD.UseVisualStyleBackColor = true;
+            this.telepresenceMetroToggleWASD.CheckedChanged += new System.EventHandler(this.metroToggle5_CheckedChanged);
             // 
             // label8
             // 
@@ -458,45 +458,45 @@
             this.label9.Text = "Camera:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroToggle6
+            // telepresenceMetroToggleCamera
             // 
-            this.metroToggle6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroToggle6.AutoSize = true;
-            this.metroToggle6.CustomBackground = false;
-            this.metroToggle6.DisplayStatus = false;
-            this.metroToggle6.FontSize = MetroFramework.MetroLinkSize.Small;
-            this.metroToggle6.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.metroToggle6.Location = new System.Drawing.Point(105, 203);
-            this.metroToggle6.Name = "metroToggle6";
-            this.metroToggle6.Size = new System.Drawing.Size(50, 14);
-            this.metroToggle6.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroToggle6.StyleManager = this.metroStyleManager;
-            this.metroToggle6.TabIndex = 15;
-            this.metroToggle6.Text = "Off";
-            this.metroToggle6.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroToggle6.UseStyleColors = true;
-            this.metroToggle6.UseVisualStyleBackColor = true;
-            this.metroToggle6.CheckedChanged += new System.EventHandler(this.metroToggle6_CheckedChanged);
+            this.telepresenceMetroToggleCamera.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.telepresenceMetroToggleCamera.AutoSize = true;
+            this.telepresenceMetroToggleCamera.CustomBackground = false;
+            this.telepresenceMetroToggleCamera.DisplayStatus = false;
+            this.telepresenceMetroToggleCamera.FontSize = MetroFramework.MetroLinkSize.Small;
+            this.telepresenceMetroToggleCamera.FontWeight = MetroFramework.MetroLinkWeight.Regular;
+            this.telepresenceMetroToggleCamera.Location = new System.Drawing.Point(105, 203);
+            this.telepresenceMetroToggleCamera.Name = "telepresenceMetroToggleCamera";
+            this.telepresenceMetroToggleCamera.Size = new System.Drawing.Size(50, 14);
+            this.telepresenceMetroToggleCamera.Style = MetroFramework.MetroColorStyle.Orange;
+            this.telepresenceMetroToggleCamera.StyleManager = this.metroStyleManager;
+            this.telepresenceMetroToggleCamera.TabIndex = 15;
+            this.telepresenceMetroToggleCamera.Text = "Off";
+            this.telepresenceMetroToggleCamera.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.telepresenceMetroToggleCamera.UseStyleColors = true;
+            this.telepresenceMetroToggleCamera.UseVisualStyleBackColor = true;
+            this.telepresenceMetroToggleCamera.CheckedChanged += new System.EventHandler(this.metroToggle6_CheckedChanged);
             // 
-            // metroToggle2
+            // telepresenceMetroToggleCV
             // 
-            this.metroToggle2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroToggle2.AutoSize = true;
-            this.metroToggle2.CustomBackground = false;
-            this.metroToggle2.DisplayStatus = false;
-            this.metroToggle2.FontSize = MetroFramework.MetroLinkSize.Small;
-            this.metroToggle2.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.metroToggle2.Location = new System.Drawing.Point(105, 223);
-            this.metroToggle2.Name = "metroToggle2";
-            this.metroToggle2.Size = new System.Drawing.Size(50, 14);
-            this.metroToggle2.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroToggle2.StyleManager = this.metroStyleManager;
-            this.metroToggle2.TabIndex = 17;
-            this.metroToggle2.Text = "Off";
-            this.metroToggle2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroToggle2.UseStyleColors = true;
-            this.metroToggle2.UseVisualStyleBackColor = true;
-            this.metroToggle2.CheckedChanged += new System.EventHandler(this.metroToggle2_CheckedChanged);
+            this.telepresenceMetroToggleCV.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.telepresenceMetroToggleCV.AutoSize = true;
+            this.telepresenceMetroToggleCV.CustomBackground = false;
+            this.telepresenceMetroToggleCV.DisplayStatus = false;
+            this.telepresenceMetroToggleCV.FontSize = MetroFramework.MetroLinkSize.Small;
+            this.telepresenceMetroToggleCV.FontWeight = MetroFramework.MetroLinkWeight.Regular;
+            this.telepresenceMetroToggleCV.Location = new System.Drawing.Point(105, 223);
+            this.telepresenceMetroToggleCV.Name = "telepresenceMetroToggleCV";
+            this.telepresenceMetroToggleCV.Size = new System.Drawing.Size(50, 14);
+            this.telepresenceMetroToggleCV.Style = MetroFramework.MetroColorStyle.Orange;
+            this.telepresenceMetroToggleCV.StyleManager = this.metroStyleManager;
+            this.telepresenceMetroToggleCV.TabIndex = 17;
+            this.telepresenceMetroToggleCV.Text = "Off";
+            this.telepresenceMetroToggleCV.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.telepresenceMetroToggleCV.UseStyleColors = true;
+            this.telepresenceMetroToggleCV.UseVisualStyleBackColor = true;
+            this.telepresenceMetroToggleCV.CheckedChanged += new System.EventHandler(this.metroToggle2_CheckedChanged);
             // 
             // label27
             // 
@@ -516,7 +516,7 @@
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.label16, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.telepresenceLabelLogLeftBottom, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 421);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
@@ -527,25 +527,25 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(225, 50);
             this.tableLayoutPanel5.TabIndex = 34;
             // 
-            // label16
+            // telepresenceLabelLogLeftBottom
             // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.label16.Location = new System.Drawing.Point(28, 28);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(38, 19);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "none";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.telepresenceLabelLogLeftBottom.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.telepresenceLabelLogLeftBottom.AutoSize = true;
+            this.telepresenceLabelLogLeftBottom.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.telepresenceLabelLogLeftBottom.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.telepresenceLabelLogLeftBottom.Location = new System.Drawing.Point(28, 28);
+            this.telepresenceLabelLogLeftBottom.Name = "telepresenceLabelLogLeftBottom";
+            this.telepresenceLabelLogLeftBottom.Size = new System.Drawing.Size(38, 19);
+            this.telepresenceLabelLogLeftBottom.TabIndex = 3;
+            this.telepresenceLabelLogLeftBottom.Text = "none";
+            this.telepresenceLabelLogLeftBottom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel6.Controls.Add(this.metroProgressSpinner3, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.metroProgressSpinner, 1, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(225, 421);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
@@ -556,20 +556,20 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(527, 50);
             this.tableLayoutPanel6.TabIndex = 35;
             // 
-            // metroProgressSpinner3
+            // metroProgressSpinner
             // 
-            this.metroProgressSpinner3.CustomBackground = false;
-            this.metroProgressSpinner3.Location = new System.Drawing.Point(505, 28);
-            this.metroProgressSpinner3.Maximum = 100;
-            this.metroProgressSpinner3.Name = "metroProgressSpinner3";
-            this.metroProgressSpinner3.Size = new System.Drawing.Size(19, 19);
-            this.metroProgressSpinner3.Speed = 2F;
-            this.metroProgressSpinner3.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroProgressSpinner3.StyleManager = this.metroStyleManager;
-            this.metroProgressSpinner3.TabIndex = 32;
-            this.metroProgressSpinner3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroProgressSpinner3.Value = 60;
-            this.metroProgressSpinner3.Visible = false;
+            this.metroProgressSpinner.CustomBackground = false;
+            this.metroProgressSpinner.Location = new System.Drawing.Point(505, 28);
+            this.metroProgressSpinner.Maximum = 100;
+            this.metroProgressSpinner.Name = "metroProgressSpinner";
+            this.metroProgressSpinner.Size = new System.Drawing.Size(19, 19);
+            this.metroProgressSpinner.Speed = 2F;
+            this.metroProgressSpinner.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroProgressSpinner.StyleManager = this.metroStyleManager;
+            this.metroProgressSpinner.TabIndex = 32;
+            this.metroProgressSpinner.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroProgressSpinner.Value = 60;
+            this.metroProgressSpinner.Visible = false;
             // 
             // panel1
             // 
@@ -580,7 +580,7 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.telepresencePictureBoxCamera);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(228, 3);
             this.panel1.Name = "panel1";
@@ -653,18 +653,17 @@
             this.panel2.TabIndex = 1;
             this.panel2.Visible = false;
             // 
-            // pictureBox2
+            // telepresencePictureBoxCamera
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(521, 415);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.telepresencePictureBoxCamera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.telepresencePictureBoxCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.telepresencePictureBoxCamera.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.telepresencePictureBoxCamera.Location = new System.Drawing.Point(0, 0);
+            this.telepresencePictureBoxCamera.Name = "telepresencePictureBoxCamera";
+            this.telepresencePictureBoxCamera.Size = new System.Drawing.Size(521, 415);
+            this.telepresencePictureBoxCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.telepresencePictureBoxCamera.TabIndex = 0;
+            this.telepresencePictureBoxCamera.TabStop = false;
             // 
             // metroTabPage4
             // 
@@ -1478,7 +1477,7 @@
             this.tableLayoutPanel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telepresencePictureBoxCamera)).EndInit();
             this.metroTabPage4.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel14.ResumeLayout(false);
@@ -1515,21 +1514,21 @@
         private Controls.MetroTabPage metroTabPage2;
         private Controls.MetroTabPage metroTabPage3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private Controls.MetroProgressSpinner metroProgressSpinner3;
+        private System.Windows.Forms.PictureBox telepresencePictureBoxCamera;
+        private Controls.MetroProgressSpinner metroProgressSpinner;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label telepresenceLabelConnectionStatus;
         private System.Windows.Forms.Label label1;
-        private Controls.MetroToggle metroToggle4;
+        private Controls.MetroToggle telepresenceMetroToggleConnection;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label telepresenceLabelSoftwareVersion;
+        private System.Windows.Forms.Label telepresenceLabelHardwareVersion;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private Controls.MetroToggle metroToggle6;
-        private Controls.MetroToggle metroToggle5;
-        private System.Windows.Forms.Label label11;
+        private Controls.MetroToggle telepresenceMetroToggleCamera;
+        private Controls.MetroToggle telepresenceMetroToggleWASD;
+        private System.Windows.Forms.Label telepresenceLabelBattery;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
@@ -1541,7 +1540,7 @@
         private Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label telepresenceLabelLogLeftBottom;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Label label23;
@@ -1568,10 +1567,10 @@
         private System.Windows.Forms.Panel panel2;
         private Controls.MetroTextBox metroTextBox4;
         private System.Windows.Forms.Label label25;
-        private Controls.MetroToggle metroToggle1;
+        private Controls.MetroToggle telepresenceMetroToggleGrasper;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label2;
-        private Controls.MetroToggle metroToggle2;
+        private Controls.MetroToggle telepresenceMetroToggleCV;
         private System.Windows.Forms.Label label27;
         private Controls.MetroTabPage metroTabPage4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
