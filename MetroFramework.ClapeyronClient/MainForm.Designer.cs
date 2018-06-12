@@ -267,7 +267,7 @@
             this.telepresenceMetroToggleGrasper.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.telepresenceMetroToggleGrasper.UseStyleColors = true;
             this.telepresenceMetroToggleGrasper.UseVisualStyleBackColor = true;
-            this.telepresenceMetroToggleGrasper.CheckedChanged += new System.EventHandler(this.metroToggle1_CheckedChanged);
+            this.telepresenceMetroToggleGrasper.CheckedChanged += new System.EventHandler(this.telepresenceMetroToggleGrasper_CheckedChanged);
             // 
             // metroStyleManager
             // 
@@ -397,7 +397,7 @@
             this.telepresenceMetroToggleConnection.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.telepresenceMetroToggleConnection.UseStyleColors = false;
             this.telepresenceMetroToggleConnection.UseVisualStyleBackColor = true;
-            this.telepresenceMetroToggleConnection.CheckedChanged += new System.EventHandler(this.metroToggle4_CheckedChanged);
+            this.telepresenceMetroToggleConnection.CheckedChanged += new System.EventHandler(this.telepresenceMetroToggleConnection_CheckedChanged);
             // 
             // telepresenceLabelConnectionStatus
             // 
@@ -430,7 +430,7 @@
             this.telepresenceMetroToggleWASD.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.telepresenceMetroToggleWASD.UseStyleColors = true;
             this.telepresenceMetroToggleWASD.UseVisualStyleBackColor = true;
-            this.telepresenceMetroToggleWASD.CheckedChanged += new System.EventHandler(this.metroToggle5_CheckedChanged);
+            this.telepresenceMetroToggleWASD.CheckedChanged += new System.EventHandler(this.telepresenceMetroToggleWASD_CheckedChanged);
             // 
             // label8
             // 
@@ -476,7 +476,7 @@
             this.telepresenceMetroToggleCamera.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.telepresenceMetroToggleCamera.UseStyleColors = true;
             this.telepresenceMetroToggleCamera.UseVisualStyleBackColor = true;
-            this.telepresenceMetroToggleCamera.CheckedChanged += new System.EventHandler(this.metroToggle6_CheckedChanged);
+            this.telepresenceMetroToggleCamera.CheckedChanged += new System.EventHandler(this.telepresenceMetroToggleCamera_CheckedChanged);
             // 
             // telepresenceMetroToggleCV
             // 
@@ -496,7 +496,7 @@
             this.telepresenceMetroToggleCV.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.telepresenceMetroToggleCV.UseStyleColors = true;
             this.telepresenceMetroToggleCV.UseVisualStyleBackColor = true;
-            this.telepresenceMetroToggleCV.CheckedChanged += new System.EventHandler(this.metroToggle2_CheckedChanged);
+            this.telepresenceMetroToggleCV.CheckedChanged += new System.EventHandler(this.telepresenceMetroToggleCV_CheckedChanged);
             // 
             // label27
             // 

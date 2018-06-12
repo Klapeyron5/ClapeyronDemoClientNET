@@ -185,7 +185,7 @@ namespace MetroFramework.ClapeyronClient
             save_color_to_xml(2);
         }
 
-        private void metroToggle4_CheckedChanged(object sender, EventArgs e)
+        private void telepresenceMetroToggleConnection_CheckedChanged(object sender, EventArgs e)
         {
             if (telepresenceMetroToggleConnection.Checked)
             {
@@ -212,7 +212,7 @@ namespace MetroFramework.ClapeyronClient
             }
         }
 
-        private void metroToggle5_CheckedChanged(object sender, EventArgs e)
+        private void telepresenceMetroToggleWASD_CheckedChanged(object sender, EventArgs e)
         {
             if (telepresenceMetroToggleWASD.Checked)
             {
@@ -234,7 +234,7 @@ namespace MetroFramework.ClapeyronClient
             }
         }
 
-        private void metroToggle6_CheckedChanged(object sender, EventArgs e)
+        private void telepresenceMetroToggleCamera_CheckedChanged(object sender, EventArgs e)
         {
             if (telepresenceMetroToggleCamera.Checked)
             {
@@ -249,7 +249,7 @@ namespace MetroFramework.ClapeyronClient
             }
         }
 
-        private void metroToggle1_CheckedChanged(object sender, EventArgs e)
+        private void telepresenceMetroToggleGrasper_CheckedChanged(object sender, EventArgs e)
         {
             if (telepresenceMetroToggleGrasper.Checked)
             {
@@ -267,7 +267,7 @@ namespace MetroFramework.ClapeyronClient
 
         bool cv_is_on = false;
 
-        private void metroToggle2_CheckedChanged(object sender, EventArgs e)
+        private void telepresenceMetroToggleCV_CheckedChanged(object sender, EventArgs e)
         {
             if (telepresenceMetroToggleCV.Checked)
             {
