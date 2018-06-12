@@ -34,9 +34,9 @@ namespace MetroFramework.ClapeyronClient
             loadOptions();
             PopulateLearnedItemsList();
 
-            IPAddress remoteIPAddress = IPAddress.Parse(metroTextBox1.Text);
-            IPEndPoint endPoint = new IPEndPoint(remoteIPAddress, int.Parse(metroTextBox2.Text));
-            cmd = new Commander(new UdpClient(int.Parse(metroTextBox2.Text)), new UdpClient(int.Parse(metroTextBox3.Text)), endPoint, this);
+            IPAddress remoteIPAddress = IPAddress.Parse(optionsMetroTextBoxRobotIP.Text);
+            IPEndPoint endPoint = new IPEndPoint(remoteIPAddress, int.Parse(optionsMetroTextBoxRobotPort.Text));
+            cmd = new Commander(new UdpClient(int.Parse(optionsMetroTextBoxRobotPort.Text)), new UdpClient(int.Parse(optionsMetroTextBoxClientPort.Text)), endPoint, this);
             cmd.init();
 
             streamer = new ThreadRunner(new ThreadStart(stream));
@@ -71,20 +71,20 @@ namespace MetroFramework.ClapeyronClient
                             {
                                 if (config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].Name.Equals("robot_ip"))
                                 {
-                                    metroTextBox1.Text = config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText;
+                                    optionsMetroTextBoxRobotIP.Text = config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText;
                                     //Console.WriteLine(">> robot_ip: " + metroTextBox1.Text);
                                 }
                                 if (config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].Name.Equals("robot_port"))
                                 {
-                                    metroTextBox2.Text = config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText;
+                                    optionsMetroTextBoxRobotPort.Text = config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText;
                                 }
                                 if (config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].Name.Equals("client_port"))
                                 {
-                                    metroTextBox3.Text = config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText;
+                                    optionsMetroTextBoxClientPort.Text = config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText;
                                 }
                                 if (config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].Name.Equals("cam_string"))
                                 {
-                                    metroTextBox4.Text = config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText;
+                                    optionsMetroTextBoxCamURL.Text = config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText;
                                 }
                             }
                         }
@@ -122,7 +122,7 @@ namespace MetroFramework.ClapeyronClient
             int ticker = 0;
             while (!streamer.is_terminated)
             {
-                CamStreamer.shot(metroTextBox4.Text,this);
+                CamStreamer.shot(optionsMetroTextBoxCamURL.Text,this);
                 telepresencePictureBoxCamera.Image = CamStreamer.image;
                 streamer.ev_suspend.WaitOne();
 
@@ -189,15 +189,13 @@ namespace MetroFramework.ClapeyronClient
         {
             if (telepresenceMetroToggleConnection.Checked)
             {
-                metroProgressSpinner.Visible = true;
+                telepresenceMetroProgressSpinner.Visible = true;
                 telepresenceLabelLogLeftBottom.Text = "Connecting..";
                 cmd.send("INIT");
-
-                Console.WriteLine("tgl_on"); //debug
             }
             else
             {
-                metroProgressSpinner.Visible = false;
+                telepresenceMetroProgressSpinner.Visible = false;
                 telepresenceLabelLogLeftBottom.Text = "Canceled";
                 telepresenceLabelConnectionStatus.Text = "not connected";
                 telepresenceLabelConnectionStatus.ForeColor = Color.LightSalmon;
@@ -207,8 +205,6 @@ namespace MetroFramework.ClapeyronClient
                 cmd.send("CAM_OFF");
 
                 cmd.is_connected = false;
-
-                Console.WriteLine("tgl_off"); //debug
             }
         }
 
@@ -315,7 +311,7 @@ namespace MetroFramework.ClapeyronClient
         }
         public void setSpinnerState(bool state)
         {
-            metroProgressSpinner.Visible = state;
+            telepresenceMetroProgressSpinner.Visible = state;
         }
         public void setPictureBox(Bitmap bmp)
         {
@@ -483,19 +479,19 @@ namespace MetroFramework.ClapeyronClient
                             {
                                 if (config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].Name.Equals("robot_ip"))
                                 {
-                                    metroTextBox1.Text = default_robot_ip;
+                                    optionsMetroTextBoxRobotIP.Text = default_robot_ip;
                                 }
                                 if (config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].Name.Equals("robot_port"))
                                 {
-                                    metroTextBox2.Text = default_robot_port;
+                                    optionsMetroTextBoxRobotPort.Text = default_robot_port;
                                 }
                                 if (config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].Name.Equals("client_port"))
                                 {
-                                    metroTextBox3.Text = default_client_port;
+                                    optionsMetroTextBoxClientPort.Text = default_client_port;
                                 }
                                 if (config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].Name.Equals("cam_string"))
                                 {
-                                    metroTextBox4.Text = default_cam_string;
+                                    optionsMetroTextBoxCamURL.Text = default_cam_string;
                                 }
                             }
                         }
@@ -520,20 +516,20 @@ namespace MetroFramework.ClapeyronClient
                             {
                                 if (config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].Name.Equals("robot_ip"))
                                 {
-                                    config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText = metroTextBox1.Text;
+                                    config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText = optionsMetroTextBoxRobotIP.Text;
                                     //Console.WriteLine(">> robot_ip: " + metroTextBox1.Text);
                                 }
                                 if (config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].Name.Equals("robot_port"))
                                 {
-                                    config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText = metroTextBox2.Text;
+                                    config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText = optionsMetroTextBoxRobotPort.Text;
                                 }
                                 if (config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].Name.Equals("client_port"))
                                 {
-                                    config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText = metroTextBox3.Text;
+                                    config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText = optionsMetroTextBoxClientPort.Text;
                                 }
                                 if (config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].Name.Equals("cam_string"))
                                 {
-                                    config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText = metroTextBox4.Text;
+                                    config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText = optionsMetroTextBoxCamURL.Text;
                                 }
                             }
                         }

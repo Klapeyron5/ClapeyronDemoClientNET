@@ -54,7 +54,7 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.telepresenceLabelLogLeftBottom = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroProgressSpinner = new MetroFramework.Controls.MetroProgressSpinner();
+            this.telepresenceMetroProgressSpinner = new MetroFramework.Controls.MetroProgressSpinner();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label32 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -92,15 +92,15 @@
             this.label24 = new System.Windows.Forms.Label();
             this.button1OptionsColor1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
+            this.optionsMetroTextBoxCamURL = new MetroFramework.Controls.MetroTextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.optionsMetroTextBoxClientPort = new MetroFramework.Controls.MetroTextBox();
+            this.optionsMetroTextBoxRobotPort = new MetroFramework.Controls.MetroTextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.optionsMetroTextBoxRobotIP = new MetroFramework.Controls.MetroTextBox();
             this.metroButton1OptionsDefaul = new MetroFramework.Controls.MetroButton();
             this.metroButton2OptionsSave = new MetroFramework.Controls.MetroButton();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
@@ -151,7 +151,7 @@
             this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Light;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(760, 520);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.StyleManager = this.metroStyleManager;
@@ -545,7 +545,7 @@
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel6.Controls.Add(this.metroProgressSpinner, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.telepresenceMetroProgressSpinner, 1, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(225, 421);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
@@ -556,20 +556,20 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(527, 50);
             this.tableLayoutPanel6.TabIndex = 35;
             // 
-            // metroProgressSpinner
+            // telepresenceMetroProgressSpinner
             // 
-            this.metroProgressSpinner.CustomBackground = false;
-            this.metroProgressSpinner.Location = new System.Drawing.Point(505, 28);
-            this.metroProgressSpinner.Maximum = 100;
-            this.metroProgressSpinner.Name = "metroProgressSpinner";
-            this.metroProgressSpinner.Size = new System.Drawing.Size(19, 19);
-            this.metroProgressSpinner.Speed = 2F;
-            this.metroProgressSpinner.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroProgressSpinner.StyleManager = this.metroStyleManager;
-            this.metroProgressSpinner.TabIndex = 32;
-            this.metroProgressSpinner.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroProgressSpinner.Value = 60;
-            this.metroProgressSpinner.Visible = false;
+            this.telepresenceMetroProgressSpinner.CustomBackground = false;
+            this.telepresenceMetroProgressSpinner.Location = new System.Drawing.Point(505, 28);
+            this.telepresenceMetroProgressSpinner.Maximum = 100;
+            this.telepresenceMetroProgressSpinner.Name = "telepresenceMetroProgressSpinner";
+            this.telepresenceMetroProgressSpinner.Size = new System.Drawing.Size(19, 19);
+            this.telepresenceMetroProgressSpinner.Speed = 2F;
+            this.telepresenceMetroProgressSpinner.Style = MetroFramework.MetroColorStyle.Orange;
+            this.telepresenceMetroProgressSpinner.StyleManager = this.metroStyleManager;
+            this.telepresenceMetroProgressSpinner.TabIndex = 32;
+            this.telepresenceMetroProgressSpinner.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.telepresenceMetroProgressSpinner.Value = 60;
+            this.telepresenceMetroProgressSpinner.Visible = false;
             // 
             // panel1
             // 
@@ -1114,15 +1114,15 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel8.Controls.Add(this.metroTextBox4, 1, 6);
+            this.tableLayoutPanel8.Controls.Add(this.optionsMetroTextBoxCamURL, 1, 6);
             this.tableLayoutPanel8.Controls.Add(this.label25, 0, 6);
-            this.tableLayoutPanel8.Controls.Add(this.metroTextBox3, 1, 5);
-            this.tableLayoutPanel8.Controls.Add(this.metroTextBox2, 1, 4);
+            this.tableLayoutPanel8.Controls.Add(this.optionsMetroTextBoxClientPort, 1, 5);
+            this.tableLayoutPanel8.Controls.Add(this.optionsMetroTextBoxRobotPort, 1, 4);
             this.tableLayoutPanel8.Controls.Add(this.label19, 0, 5);
             this.tableLayoutPanel8.Controls.Add(this.label18, 0, 4);
             this.tableLayoutPanel8.Controls.Add(this.label17, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.label23, 0, 3);
-            this.tableLayoutPanel8.Controls.Add(this.metroTextBox1, 1, 3);
+            this.tableLayoutPanel8.Controls.Add(this.optionsMetroTextBoxRobotIP, 1, 3);
             this.tableLayoutPanel8.Controls.Add(this.metroButton1OptionsDefaul, 0, 8);
             this.tableLayoutPanel8.Controls.Add(this.metroButton2OptionsSave, 1, 8);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1145,19 +1145,19 @@
             // 
             // metroTextBox4
             // 
-            this.metroTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox4.FontSize = MetroFramework.MetroTextBoxSize.Small;
-            this.metroTextBox4.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.metroTextBox4.Location = new System.Drawing.Point(103, 153);
-            this.metroTextBox4.Multiline = false;
-            this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.SelectedText = "";
-            this.metroTextBox4.Size = new System.Drawing.Size(94, 24);
-            this.metroTextBox4.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroTextBox4.StyleManager = this.metroStyleManager;
-            this.metroTextBox4.TabIndex = 6;
-            this.metroTextBox4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox4.UseStyleColors = false;
+            this.optionsMetroTextBoxCamURL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.optionsMetroTextBoxCamURL.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.optionsMetroTextBoxCamURL.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.optionsMetroTextBoxCamURL.Location = new System.Drawing.Point(103, 153);
+            this.optionsMetroTextBoxCamURL.Multiline = false;
+            this.optionsMetroTextBoxCamURL.Name = "metroTextBox4";
+            this.optionsMetroTextBoxCamURL.SelectedText = "";
+            this.optionsMetroTextBoxCamURL.Size = new System.Drawing.Size(94, 24);
+            this.optionsMetroTextBoxCamURL.Style = MetroFramework.MetroColorStyle.Orange;
+            this.optionsMetroTextBoxCamURL.StyleManager = this.metroStyleManager;
+            this.optionsMetroTextBoxCamURL.TabIndex = 6;
+            this.optionsMetroTextBoxCamURL.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.optionsMetroTextBoxCamURL.UseStyleColors = false;
             // 
             // label25
             // 
@@ -1167,42 +1167,42 @@
             this.label25.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.label25.Location = new System.Drawing.Point(3, 155);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(76, 19);
+            this.label25.Size = new System.Drawing.Size(67, 19);
             this.label25.TabIndex = 3;
-            this.label25.Text = "Cam string:";
+            this.label25.Text = "Cam URL:";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroTextBox3
+            // optionsMetroTextBoxClientPort
             // 
-            this.metroTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox3.FontSize = MetroFramework.MetroTextBoxSize.Small;
-            this.metroTextBox3.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.metroTextBox3.Location = new System.Drawing.Point(103, 123);
-            this.metroTextBox3.Multiline = false;
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.SelectedText = "";
-            this.metroTextBox3.Size = new System.Drawing.Size(94, 24);
-            this.metroTextBox3.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroTextBox3.StyleManager = this.metroStyleManager;
-            this.metroTextBox3.TabIndex = 5;
-            this.metroTextBox3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox3.UseStyleColors = false;
+            this.optionsMetroTextBoxClientPort.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.optionsMetroTextBoxClientPort.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.optionsMetroTextBoxClientPort.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.optionsMetroTextBoxClientPort.Location = new System.Drawing.Point(103, 123);
+            this.optionsMetroTextBoxClientPort.Multiline = false;
+            this.optionsMetroTextBoxClientPort.Name = "optionsMetroTextBoxClientPort";
+            this.optionsMetroTextBoxClientPort.SelectedText = "";
+            this.optionsMetroTextBoxClientPort.Size = new System.Drawing.Size(94, 24);
+            this.optionsMetroTextBoxClientPort.Style = MetroFramework.MetroColorStyle.Orange;
+            this.optionsMetroTextBoxClientPort.StyleManager = this.metroStyleManager;
+            this.optionsMetroTextBoxClientPort.TabIndex = 5;
+            this.optionsMetroTextBoxClientPort.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.optionsMetroTextBoxClientPort.UseStyleColors = false;
             // 
-            // metroTextBox2
+            // optionsMetroTextBoxRobotPort
             // 
-            this.metroTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox2.FontSize = MetroFramework.MetroTextBoxSize.Small;
-            this.metroTextBox2.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.metroTextBox2.Location = new System.Drawing.Point(103, 93);
-            this.metroTextBox2.Multiline = false;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.Size = new System.Drawing.Size(94, 24);
-            this.metroTextBox2.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroTextBox2.StyleManager = this.metroStyleManager;
-            this.metroTextBox2.TabIndex = 5;
-            this.metroTextBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox2.UseStyleColors = false;
+            this.optionsMetroTextBoxRobotPort.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.optionsMetroTextBoxRobotPort.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.optionsMetroTextBoxRobotPort.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.optionsMetroTextBoxRobotPort.Location = new System.Drawing.Point(103, 93);
+            this.optionsMetroTextBoxRobotPort.Multiline = false;
+            this.optionsMetroTextBoxRobotPort.Name = "optionsMetroTextBoxRobotPort";
+            this.optionsMetroTextBoxRobotPort.SelectedText = "";
+            this.optionsMetroTextBoxRobotPort.Size = new System.Drawing.Size(94, 24);
+            this.optionsMetroTextBoxRobotPort.Style = MetroFramework.MetroColorStyle.Orange;
+            this.optionsMetroTextBoxRobotPort.StyleManager = this.metroStyleManager;
+            this.optionsMetroTextBoxRobotPort.TabIndex = 5;
+            this.optionsMetroTextBoxRobotPort.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.optionsMetroTextBoxRobotPort.UseStyleColors = false;
             // 
             // label19
             // 
@@ -1256,21 +1256,21 @@
             this.label23.Text = "Robot IP:";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroTextBox1
+            // optionsMetroTextBoxRobotIP
             // 
-            this.metroTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Small;
-            this.metroTextBox1.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
-            this.metroTextBox1.Location = new System.Drawing.Point(103, 63);
-            this.metroTextBox1.Multiline = false;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.Size = new System.Drawing.Size(94, 24);
-            this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroTextBox1.StyleManager = this.metroStyleManager;
-            this.metroTextBox1.TabIndex = 4;
-            this.metroTextBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox1.UseStyleColors = false;
+            this.optionsMetroTextBoxRobotIP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.optionsMetroTextBoxRobotIP.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.optionsMetroTextBoxRobotIP.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.optionsMetroTextBoxRobotIP.Location = new System.Drawing.Point(103, 63);
+            this.optionsMetroTextBoxRobotIP.Multiline = false;
+            this.optionsMetroTextBoxRobotIP.Name = "optionsMetroTextBoxRobotIP";
+            this.optionsMetroTextBoxRobotIP.SelectedText = "";
+            this.optionsMetroTextBoxRobotIP.Size = new System.Drawing.Size(94, 24);
+            this.optionsMetroTextBoxRobotIP.Style = MetroFramework.MetroColorStyle.Orange;
+            this.optionsMetroTextBoxRobotIP.StyleManager = this.metroStyleManager;
+            this.optionsMetroTextBoxRobotIP.TabIndex = 4;
+            this.optionsMetroTextBoxRobotIP.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.optionsMetroTextBoxRobotIP.UseStyleColors = false;
             // 
             // metroButton1OptionsDefaul
             // 
@@ -1515,7 +1515,7 @@
         private Controls.MetroTabPage metroTabPage3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox telepresencePictureBoxCamera;
-        private Controls.MetroProgressSpinner metroProgressSpinner;
+        private Controls.MetroProgressSpinner telepresenceMetroProgressSpinner;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label telepresenceLabelConnectionStatus;
         private System.Windows.Forms.Label label1;
@@ -1544,12 +1544,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Label label23;
-        private Controls.MetroTextBox metroTextBox3;
-        private Controls.MetroTextBox metroTextBox2;
+        private Controls.MetroTextBox optionsMetroTextBoxClientPort;
+        private Controls.MetroTextBox optionsMetroTextBoxRobotPort;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private Controls.MetroTextBox metroTextBox1;
+        private Controls.MetroTextBox optionsMetroTextBoxRobotIP;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
@@ -1565,7 +1565,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private Controls.MetroTextBox metroTextBox4;
+        private Controls.MetroTextBox optionsMetroTextBoxCamURL;
         private System.Windows.Forms.Label label25;
         private Controls.MetroToggle telepresenceMetroToggleGrasper;
         private System.Windows.Forms.Label label26;
