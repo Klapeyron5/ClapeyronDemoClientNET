@@ -151,7 +151,7 @@
             this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Light;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(760, 520);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.StyleManager = this.metroStyleManager;
@@ -1143,14 +1143,14 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(225, 240);
             this.tableLayoutPanel8.TabIndex = 34;
             // 
-            // metroTextBox4
+            // optionsMetroTextBoxCamURL
             // 
             this.optionsMetroTextBoxCamURL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.optionsMetroTextBoxCamURL.FontSize = MetroFramework.MetroTextBoxSize.Small;
             this.optionsMetroTextBoxCamURL.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
             this.optionsMetroTextBoxCamURL.Location = new System.Drawing.Point(103, 153);
             this.optionsMetroTextBoxCamURL.Multiline = false;
-            this.optionsMetroTextBoxCamURL.Name = "metroTextBox4";
+            this.optionsMetroTextBoxCamURL.Name = "optionsMetroTextBoxCamURL";
             this.optionsMetroTextBoxCamURL.SelectedText = "";
             this.optionsMetroTextBoxCamURL.Size = new System.Drawing.Size(94, 24);
             this.optionsMetroTextBoxCamURL.Style = MetroFramework.MetroColorStyle.Orange;
