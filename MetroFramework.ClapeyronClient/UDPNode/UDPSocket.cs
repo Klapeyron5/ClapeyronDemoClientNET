@@ -14,10 +14,17 @@ namespace MetroFramework.Demo.UDPNode
         private UDPSocketListener udpSocketListener;
 
         /// <summary>
-        /// Через эту переменную осуществляется непосредственно доступ к порту.
-        /// Доступ рекомендуется только с помощью synchronized (специально для этого есть getLocalSocket()).
+        /// Через эту переменную осуществляется непосредственно доступ к порту для отправки сообщений.
+        /// Доступ рекомендуется только с помощью synchronized (специально для этого есть getOutLocalSocket()).
         /// </summary>
-        private static UdpClient localSocket;
+        private static UdpClient localOutSocket;
+
+        /// <summary>
+        /// Через эту переменную осуществляется непосредственно доступ к порту для прослушки входящих сообщений.
+        /// Доступ рекомендуется только с помощью synchronized (специально для этого есть getInLocalSocket()).
+        /// </summary>
+        private static UdpClient localInSocket;
+
 
         /// <summary>
         /// Поток прослушки входящих сообщений (на заданном порту).
@@ -35,12 +42,13 @@ namespace MetroFramework.Demo.UDPNode
         /// </summary>
         /// <param name="inPort"></param>
         /// <param name="udpSocketListener"></param>
-        public UDPSocket(int inPort, UDPSocketListener udpSocketListener)
+        public UDPSocket(int outPort, int inPort, UDPSocketListener udpSocketListener)
         {
             this.udpSocketListener = udpSocketListener;
             try
             {
-                localSocket = new UdpClient(inPort);//SocketExc
+                localOutSocket = new UdpClient(outPort);//SocketExc
+                localInSocket = new UdpClient(inPort);//SocketExc
                 startNode();
             }
             catch (ArgumentOutOfRangeException e)
@@ -78,7 +86,7 @@ namespace MetroFramework.Demo.UDPNode
             {
                 try
                 {
-                    byte[] receivedData = getLocalSocket().Receive(ref remoteIpEndPoint);
+                    byte[] receivedData = getInLocalSocket().Receive(ref remoteIpEndPoint);
 
                     if (receivedData != null)
                     {
@@ -87,7 +95,7 @@ namespace MetroFramework.Demo.UDPNode
                     }
                     else
                     {
-                        Program.writeLine("receivedData == null");
+                        //receivedData == null
                     }
                 }
                 catch (ObjectDisposedException e)
@@ -117,14 +125,15 @@ namespace MetroFramework.Demo.UDPNode
         {
             if (isAlive())
             {
-                Program.writeLine("Closing UDP listening..."); //TODO just log
+                //Closing UDP listening...
                 setAlive(false);
-                getLocalSocket().Close();
+                getOutLocalSocket().Close();
+                getInLocalSocket().Close();
                 listeningThread.Join();
             }
             else
             {
-                Program.writeLine("Tried to close node udp socket, but it's already closed"); //TODO just log
+                //Tried to close node udp socket, but it's already closed
             }
         }
 
@@ -141,7 +150,7 @@ namespace MetroFramework.Demo.UDPNode
             {
                 if (isAlive())
                 {
-                    getLocalSocket().Send(sendData, sendData.Length, new IPEndPoint(outIP, outPort));
+                    getOutLocalSocket().Send(sendData, sendData.Length, new IPEndPoint(outIP, outPort));
                     udpSocketListener.onSocketMessageSent(outIP, outPort, message);
                 }
                 else
@@ -157,14 +166,25 @@ namespace MetroFramework.Demo.UDPNode
 
         private object locker = new object();
         /// <summary>
-        /// Осуществляйте доступ к UDP сокету (localSocket) через этот потокобезопасный метод.
+        /// Осуществляйте доступ к UDP сокету (localOutSocket) через этот потокобезопасный метод.
         /// </summary>
         /// <returns></returns>
-        private UdpClient getLocalSocket()
+        private UdpClient getOutLocalSocket()
         {
             lock (locker)
             {
-                return localSocket;
+                return localOutSocket;
+            }
+        }
+        /// <summary>
+        /// Осуществляйте доступ к UDP сокету (localInSocket) через этот потокобезопасный метод.
+        /// </summary>
+        /// <returns></returns>
+        private UdpClient getInLocalSocket()
+        {
+            lock (locker)
+            {
+                return localInSocket;
             }
         }
 
@@ -172,9 +192,9 @@ namespace MetroFramework.Demo.UDPNode
         /// Значение прослушивающегося порта.
         /// </summary>
         /// <returns></returns>
-        public int getLocalPort()
+        public int getInLocalPort()
         {
-            return ((IPEndPoint)getLocalSocket().Client.LocalEndPoint).Port;
+            return ((IPEndPoint)getInLocalSocket().Client.LocalEndPoint).Port;
         }
 
         /// <summary>

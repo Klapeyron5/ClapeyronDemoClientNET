@@ -2,24 +2,25 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Net;
-using System.Net.Sockets;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
 using MetroFramework.Forms;
 using ObjectRecognition;
+using MetroFramework.Demo.UDPNode;
 
 namespace MetroFramework.ClapeyronClient
 {
     public partial class MainForm : MetroForm
     {
-        Commander cmd;
+    //    Commander cmd;
         Color second_color = Color.Orange;
 
+        UDPNode udpNode;
         ThreadRunner streamer;
 
         XmlDocument config_xml = new XmlDocument();
-        const string default_robot_ip = "192.168.8.229";
+        const string default_robot_ip = "192.168.0.100";
         const string default_robot_port = "49101";
         const string default_client_port = "49100";
         const string default_cam_string = "http://192.168.8.1:8080/?action=snapshot";
@@ -27,6 +28,7 @@ namespace MetroFramework.ClapeyronClient
         public MainForm()
         {
             InitializeComponent();
+            setTelepresenceLabelSoftwareVersion(AppInfo.version.ToString(System.Globalization.CultureInfo.InvariantCulture));
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -36,8 +38,8 @@ namespace MetroFramework.ClapeyronClient
 
             IPAddress remoteIPAddress = IPAddress.Parse(optionsMetroTextBoxRobotIP.Text);
             IPEndPoint endPoint = new IPEndPoint(remoteIPAddress, int.Parse(optionsMetroTextBoxRobotPort.Text));
-            cmd = new Commander(new UdpClient(int.Parse(optionsMetroTextBoxRobotPort.Text)), new UdpClient(int.Parse(optionsMetroTextBoxClientPort.Text)), endPoint, this);
-            cmd.init();
+         //   cmd = new Commander(new UdpClient(int.Parse(optionsMetroTextBoxRobotPort.Text)), new UdpClient(int.Parse(optionsMetroTextBoxClientPort.Text)), endPoint, this);
+         //   cmd.init();
 
             streamer = new ThreadRunner(new ThreadStart(stream));
             streamer.Background(true);
@@ -72,7 +74,7 @@ namespace MetroFramework.ClapeyronClient
                                 if (config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].Name.Equals("robot_ip"))
                                 {
                                     optionsMetroTextBoxRobotIP.Text = config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].InnerText;
-                                    //Console.WriteLine(">> robot_ip: " + metroTextBox1.Text);
+                                    //Console.WriteLine(">> robot_ip: " + optionsMetroTextBoxRobotIP.Text);
                                 }
                                 if (config_xml.ChildNodes[i].ChildNodes[j].ChildNodes[k].Name.Equals("robot_port"))
                                 {
@@ -191,7 +193,11 @@ namespace MetroFramework.ClapeyronClient
             {
                 telepresenceMetroProgressSpinner.Visible = true;
                 telepresenceLabelLogLeftBottom.Text = "Connecting..";
-                cmd.send("INIT");
+                
+                udpNode = new UDPNode(this);
+                udpNode.sendNewString(optionsMetroTextBoxRobotIP.Text, UDPNode.inPort, "HiRobotClapeyronImAClient");
+
+            //    cmd.send("INIT");
             }
             else
             {
@@ -200,11 +206,12 @@ namespace MetroFramework.ClapeyronClient
                 telepresenceLabelConnectionStatus.Text = "not connected";
                 telepresenceLabelConnectionStatus.ForeColor = Color.LightSalmon;
 
-                cmd.send("WASD_OFF");
-                cmd.send("STREAM_OFF");
-                cmd.send("CAM_OFF");
+                udpNode.closeNode();
+          //      cmd.send("WASD_OFF");
+          //      cmd.send("STREAM_OFF");
+          //      cmd.send("CAM_OFF");
 
-                cmd.is_connected = false;
+          //      cmd.is_connected = false;
             }
         }
 
@@ -212,7 +219,7 @@ namespace MetroFramework.ClapeyronClient
         {
             if (telepresenceMetroToggleWASD.Checked)
             {
-                cmd.send("WASD_ON");
+          //      cmd.send("WASD_ON");
                 telepresenceLabelLogLeftBottom.Text = "WASD on";
                 panel2.Visible = true;
                 panel3.Visible = true;
@@ -221,7 +228,7 @@ namespace MetroFramework.ClapeyronClient
             }
             else
             {
-                cmd.send("WASD_OFF");
+          //      cmd.send("WASD_OFF");
                 telepresenceLabelLogLeftBottom.Text = "WASD off";
                 panel2.Visible = false;
                 panel3.Visible = false;
@@ -249,13 +256,13 @@ namespace MetroFramework.ClapeyronClient
         {
             if (telepresenceMetroToggleGrasper.Checked)
             {
-                cmd.send("GRASP_ON");
+           //     cmd.send("GRASP_ON");
                 telepresenceLabelLogLeftBottom.Text = "Grasp on";
                 label2.Visible = true;
             }
             else
             {
-                cmd.send("GRASP_OFF");
+          //      cmd.send("GRASP_OFF");
                 telepresenceLabelLogLeftBottom.Text = "Grasp off";
                 label2.Visible = false;
             }
@@ -281,31 +288,31 @@ namespace MetroFramework.ClapeyronClient
         }
 
         //gui accessing methods
-        public void setLabel16(string text)
+        public void setTelepresenceLabelLogLeftBottom(string text)
         {
             telepresenceLabelLogLeftBottom.Text = text;
         }
-        public void setLabel6(string text)
+        public void setTelepresenceLabelHardwareVersion(string text)
         {
             telepresenceLabelHardwareVersion.Text = text;
         }
-        public void setLabel3(string text)
+        public void setTelepresenceLabelConnectionStatus(string text)
         {
             telepresenceLabelConnectionStatus.Text = text;
         }
-        public void setLabel7(string text)
+        public void setTelepresenceLabelSoftwareVersion(string text)
         {
             telepresenceLabelSoftwareVersion.Text = text;
         }
-        public void setLabel11(string text)
+        public void setTelepresenceLabelBattery(string text)
         {
             telepresenceLabelBattery.Text = text;
         }
-        public void setLabel3Color(Color color)
+        public void setTelepresenceLabelConnectionStatusColor(Color color)
         {
             telepresenceLabelConnectionStatus.ForeColor = color;
         }
-        public void setLabel11Color(Color color)
+        public void setTelepresenceLabelBatteryColor(Color color)
         {
             telepresenceLabelBattery.ForeColor = color;
         }
@@ -334,59 +341,59 @@ namespace MetroFramework.ClapeyronClient
             //wasd
             if ((e.KeyData == Keys.W) && (!keyIsPressed))
             {
-                cmd.send("FWD");
+         //       cmd.send("FWD");
                 panel5.BackColor = second_color;
                 keyIsPressed = true;
             }
             if ((e.KeyData == Keys.S) && (!keyIsPressed))
             {
-                cmd.send("BWD");
+          //      cmd.send("BWD");
                 panel3.BackColor = second_color;
                 keyIsPressed = true;
             }
             if ((e.KeyData == Keys.A) && (!keyIsPressed))
             {
-                cmd.send("LFT");
+          //      cmd.send("LFT");
                 panel2.BackColor = second_color;
                 keyIsPressed = true;
             }
             if ((e.KeyData == Keys.D) && (!keyIsPressed))
             {
-                cmd.send("RGH");
+          //      cmd.send("RGH");
                 panel4.BackColor = second_color;
                 keyIsPressed = true;
             }
             //rotate
             if ((e.KeyData == Keys.Q) && (!keyIsPressed))
             {
-                cmd.send("R_RGH");
+         //       cmd.send("R_RGH");
                 keyIsPressed = true;
             }
             if ((e.KeyData == Keys.E) && (!keyIsPressed))
             {
-                cmd.send("R_LFT");
+          //      cmd.send("R_LFT");
                 keyIsPressed = true;
             }
             //arm
             if ((e.KeyData == Keys.C) && (!keyIsPressed))
             {
-                cmd.send("M_INC");
+          //      cmd.send("M_INC");
                 keyIsPressed = true;
             }
             if ((e.KeyData == Keys.V) && (!keyIsPressed))
             {
-                cmd.send("M_DEC");
+          //      cmd.send("M_DEC");
                 keyIsPressed = true;
             }
             //grasp
             if ((e.KeyData == Keys.F) && (!keyIsPressed))
             {
-                cmd.send("G_INC");
+         //       cmd.send("G_INC");
                 keyIsPressed = true;
             }
             if ((e.KeyData == Keys.G) && (!keyIsPressed))
             {
-                cmd.send("G_DEC");
+          //      cmd.send("G_DEC");
                 keyIsPressed = true;
             }
         }
@@ -396,28 +403,28 @@ namespace MetroFramework.ClapeyronClient
             //wasd
             if (e.KeyData == Keys.W)
             {
-                cmd.send("STP");
+          //      cmd.send("STP");
                 System.Threading.Thread.Sleep(5);
                 panel5.BackColor = Color.Silver;
                 keyIsPressed = false;
             }
             if (e.KeyData == Keys.S)
             {
-                cmd.send("STP");
+         //       cmd.send("STP");
                 System.Threading.Thread.Sleep(5);
                 panel3.BackColor = Color.Silver;
                 keyIsPressed = false;
             }
             if (e.KeyData == Keys.A)
             {
-                cmd.send("STP");
+           //     cmd.send("STP");
                 System.Threading.Thread.Sleep(5);
                 panel2.BackColor = Color.Silver;
                 keyIsPressed = false;
             }
             if (e.KeyData == Keys.D)
             {
-                cmd.send("STP");
+          ///      cmd.send("STP");
                 System.Threading.Thread.Sleep(5);
                 panel4.BackColor = Color.Silver;
                 keyIsPressed = false;
@@ -425,45 +432,45 @@ namespace MetroFramework.ClapeyronClient
             //grasp
             if (e.KeyData == Keys.Q)
             {
-                cmd.send("R_STP");
+           //     cmd.send("R_STP");
                 System.Threading.Thread.Sleep(5);
                 keyIsPressed = false;
             }
             if (e.KeyData == Keys.E)
             {
-                cmd.send("R_STP");
+          //      cmd.send("R_STP");
                 System.Threading.Thread.Sleep(5);
                 keyIsPressed = false;
             }
             //arm
             if (e.KeyData == Keys.C)
             {
-                cmd.send("M_STP");
+          //      cmd.send("M_STP");
                 System.Threading.Thread.Sleep(5);
                 keyIsPressed = false;
             }
             if (e.KeyData == Keys.V)
             {
-                cmd.send("M_STP");
+           //     cmd.send("M_STP");
                 System.Threading.Thread.Sleep(5);
                 keyIsPressed = false;
             }
             //grasp
             if (e.KeyData == Keys.F)
             {
-                cmd.send("G_STP");
+           //     cmd.send("G_STP");
                 System.Threading.Thread.Sleep(5);
                 keyIsPressed = false;
             }
             if (e.KeyData == Keys.G)
             {
-                cmd.send("G_STP");
+           //     cmd.send("G_STP");
                 System.Threading.Thread.Sleep(5);
                 keyIsPressed = false;
             }
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        private void optionsMetroButtonDefault_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < config_xml.ChildNodes.Count; i++)
             {
@@ -500,7 +507,7 @@ namespace MetroFramework.ClapeyronClient
             }
         }
 
-        private void metroButton2_Click(object sender, EventArgs e)
+        private void optionsMetroButtonSave_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < config_xml.ChildNodes.Count; i++)
             {
@@ -546,7 +553,6 @@ namespace MetroFramework.ClapeyronClient
          * 
          * 
          */
-
         private Bitmap learningImage = null;
         private Bitmap backgroundImage = null;
 
@@ -648,6 +654,11 @@ namespace MetroFramework.ClapeyronClient
                     Dispatcher.Invoke(this, () => { this.label32.Text = "Did not recognize anything"; });
                 }
             }
+        }
+
+        public static void writeLine(String data)
+        {
+            Console.WriteLine(data);
         }
     }
 }

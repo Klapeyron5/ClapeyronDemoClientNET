@@ -101,8 +101,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.optionsMetroTextBoxRobotIP = new MetroFramework.Controls.MetroTextBox();
-            this.metroButton1OptionsDefaul = new MetroFramework.Controls.MetroButton();
-            this.metroButton2OptionsSave = new MetroFramework.Controls.MetroButton();
+            this.optionsMetroButtonDefaul = new MetroFramework.Controls.MetroButton();
+            this.optinsMetroButtonSave = new MetroFramework.Controls.MetroButton();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -151,7 +151,7 @@
             this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Light;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 2;
             this.metroTabControl1.Size = new System.Drawing.Size(760, 520);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.StyleManager = this.metroStyleManager;
@@ -1123,8 +1123,8 @@
             this.tableLayoutPanel8.Controls.Add(this.label17, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.label23, 0, 3);
             this.tableLayoutPanel8.Controls.Add(this.optionsMetroTextBoxRobotIP, 1, 3);
-            this.tableLayoutPanel8.Controls.Add(this.metroButton1OptionsDefaul, 0, 8);
-            this.tableLayoutPanel8.Controls.Add(this.metroButton2OptionsSave, 1, 8);
+            this.tableLayoutPanel8.Controls.Add(this.optionsMetroButtonDefaul, 0, 8);
+            this.tableLayoutPanel8.Controls.Add(this.optinsMetroButtonSave, 1, 8);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
@@ -1264,6 +1264,7 @@
             this.optionsMetroTextBoxRobotIP.Location = new System.Drawing.Point(103, 63);
             this.optionsMetroTextBoxRobotIP.Multiline = false;
             this.optionsMetroTextBoxRobotIP.Name = "optionsMetroTextBoxRobotIP";
+            this.optionsMetroTextBoxRobotIP.Text = MainForm.default_robot_ip;
             this.optionsMetroTextBoxRobotIP.SelectedText = "";
             this.optionsMetroTextBoxRobotIP.Size = new System.Drawing.Size(94, 24);
             this.optionsMetroTextBoxRobotIP.Style = MetroFramework.MetroColorStyle.Orange;
@@ -1272,33 +1273,33 @@
             this.optionsMetroTextBoxRobotIP.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.optionsMetroTextBoxRobotIP.UseStyleColors = false;
             // 
-            // metroButton1OptionsDefaul
+            // optionsMetroButtonDefaul
             // 
-            this.metroButton1OptionsDefaul.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroButton1OptionsDefaul.Highlight = false;
-            this.metroButton1OptionsDefaul.Location = new System.Drawing.Point(3, 193);
-            this.metroButton1OptionsDefaul.Name = "metroButton1OptionsDefaul";
-            this.metroButton1OptionsDefaul.Size = new System.Drawing.Size(94, 24);
-            this.metroButton1OptionsDefaul.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroButton1OptionsDefaul.StyleManager = this.metroStyleManager;
-            this.metroButton1OptionsDefaul.TabIndex = 6;
-            this.metroButton1OptionsDefaul.Text = "Defaults";
-            this.metroButton1OptionsDefaul.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton1OptionsDefaul.Click += new System.EventHandler(this.metroButton1_Click);
+            this.optionsMetroButtonDefaul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.optionsMetroButtonDefaul.Highlight = false;
+            this.optionsMetroButtonDefaul.Location = new System.Drawing.Point(3, 193);
+            this.optionsMetroButtonDefaul.Name = "optionsMetroButtonDefaul";
+            this.optionsMetroButtonDefaul.Size = new System.Drawing.Size(94, 24);
+            this.optionsMetroButtonDefaul.Style = MetroFramework.MetroColorStyle.Orange;
+            this.optionsMetroButtonDefaul.StyleManager = this.metroStyleManager;
+            this.optionsMetroButtonDefaul.TabIndex = 6;
+            this.optionsMetroButtonDefaul.Text = "Defaults";
+            this.optionsMetroButtonDefaul.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.optionsMetroButtonDefaul.Click += new System.EventHandler(this.optionsMetroButtonDefault_Click);
             // 
-            // metroButton2OptionsSave
+            // optinsMetroButtonSave
             // 
-            this.metroButton2OptionsSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroButton2OptionsSave.Highlight = false;
-            this.metroButton2OptionsSave.Location = new System.Drawing.Point(103, 193);
-            this.metroButton2OptionsSave.Name = "metroButton2OptionsSave";
-            this.metroButton2OptionsSave.Size = new System.Drawing.Size(94, 24);
-            this.metroButton2OptionsSave.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroButton2OptionsSave.StyleManager = this.metroStyleManager;
-            this.metroButton2OptionsSave.TabIndex = 7;
-            this.metroButton2OptionsSave.Text = "Save";
-            this.metroButton2OptionsSave.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroButton2OptionsSave.Click += new System.EventHandler(this.metroButton2_Click);
+            this.optinsMetroButtonSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.optinsMetroButtonSave.Highlight = false;
+            this.optinsMetroButtonSave.Location = new System.Drawing.Point(103, 193);
+            this.optinsMetroButtonSave.Name = "optinsMetroButtonSave";
+            this.optinsMetroButtonSave.Size = new System.Drawing.Size(94, 24);
+            this.optinsMetroButtonSave.Style = MetroFramework.MetroColorStyle.Orange;
+            this.optinsMetroButtonSave.StyleManager = this.metroStyleManager;
+            this.optinsMetroButtonSave.TabIndex = 7;
+            this.optinsMetroButtonSave.Text = "Save";
+            this.optinsMetroButtonSave.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.optinsMetroButtonSave.Click += new System.EventHandler(this.optionsMetroButtonSave_Click);
             // 
             // metroTabPage3
             // 
@@ -1555,8 +1556,8 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label24;
-        private Controls.MetroButton metroButton1OptionsDefaul;
-        private Controls.MetroButton metroButton2OptionsSave;
+        private Controls.MetroButton optionsMetroButtonDefaul;
+        private Controls.MetroButton optinsMetroButtonSave;
         private System.Windows.Forms.Button button3OptionsColor3;
         private System.Windows.Forms.Button button2OptionsColor2;
         private System.Windows.Forms.Button button1OptionsColor1;

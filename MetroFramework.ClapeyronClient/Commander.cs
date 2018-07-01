@@ -37,7 +37,7 @@ namespace MetroFramework.ClapeyronClient
             recv_thread.Start();
             bat_thread.Start();
 
-            _form.setLabel16("Ready");
+            _form.setTelepresenceLabelLogLeftBottom("Ready");
         }
 
         public void send(string datagram)
@@ -77,13 +77,13 @@ namespace MetroFramework.ClapeyronClient
                         {
                             is_connected = true;
 
-                            Dispatcher.Invoke(_form, () => { _form.setLabel3("connected"); });
-                            Dispatcher.Invoke(_form, () => { _form.setLabel3Color(System.Drawing.Color.LightGreen); });
-                            Dispatcher.Invoke(_form, () => { _form.setLabel16("Connected"); });
-                            Dispatcher.Invoke(_form, () => { _form.setLabel6(parsed_data[1]); });
-                            Dispatcher.Invoke(_form, () => { _form.setLabel7(parsed_data[2]); });
+                            Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelConnectionStatus("connected"); });
+                            Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelConnectionStatusColor(System.Drawing.Color.LightGreen); });
+                            Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelLogLeftBottom("Connected"); });
+                            Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelHardwareVersion(parsed_data[1]); });
+                            Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelSoftwareVersion(parsed_data[2]); });
                             Dispatcher.Invoke(_form, () => { _form.setSpinnerState(false); });
-                            Dispatcher.Invoke(_form, () => { _form.setLabel11("calculating.."); });
+                            Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelBattery("calculating.."); });
                         }
                     }
 
@@ -105,15 +105,15 @@ namespace MetroFramework.ClapeyronClient
 
                                     if (charge >= 1300)
                                     {
-                                        Dispatcher.Invoke(_form, () => { _form.setLabel11Color(Color.LightGreen); }); //green
+                                        Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelBatteryColor(Color.LightGreen); }); //green
                                         if (charge >= 1400)
                                         {
-                                            Dispatcher.Invoke(_form, () => { _form.setLabel11("100%"); });
+                                            Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelBattery("100%"); });
                                         }
                                         else
                                         {
                                             charge = (int)(0.6 * charge) - 740;
-                                            Dispatcher.Invoke(_form, () => { _form.setLabel11(charge.ToString() + "%"); });
+                                            Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelBattery(charge.ToString() + "%"); });
                                         }
                                     }
                                     else
@@ -121,21 +121,21 @@ namespace MetroFramework.ClapeyronClient
                                         if (charge > 1250)
                                         {
                                             charge = (int)(0.6 * charge) - 740;
-                                            Dispatcher.Invoke(_form, () => { _form.setLabel11(charge.ToString() + "%"); });
-                                            Dispatcher.Invoke(_form, () => { _form.setLabel11Color(Color.LightYellow); }); //yellow
+                                            Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelBattery(charge.ToString() + "%"); });
+                                            Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelBatteryColor(Color.LightYellow); }); //yellow
                                         }
                                         else
                                         {
                                             if (charge > 1200)
                                             {
                                                 charge = (int)(0.18 * charge) - 215;
-                                                Dispatcher.Invoke(_form, () => { _form.setLabel11(charge.ToString() + "%"); });
-                                                Dispatcher.Invoke(_form, () => { _form.setLabel11Color(Color.Salmon); }); //red
+                                                Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelBattery(charge.ToString() + "%"); });
+                                                Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelBatteryColor(Color.Salmon); }); //red
                                             }
                                             else
                                             {
-                                                Dispatcher.Invoke(_form, () => { _form.setLabel11("1%"); });
-                                                Dispatcher.Invoke(_form, () => { _form.setLabel11Color(Color.DarkRed); }); //black
+                                                Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelBattery("1%"); });
+                                                Dispatcher.Invoke(_form, () => { _form.setTelepresenceLabelBatteryColor(Color.DarkRed); }); //black
                                             }
                                         }
                                     }

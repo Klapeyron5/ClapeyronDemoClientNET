@@ -1,9 +1,10 @@
-﻿using System;
+﻿using MetroFramework.ClapeyronClient;
+using System;
 using System.Net;
+using System.Globalization;
 
 namespace MetroFramework.Demo.UDPNode
 {
-
     /// <summary>
     /// Надстройка над виртуальным udp сокетом (UDPSocket.cs).
     /// Обеспечивает протокольную обертку сообщений,
@@ -12,27 +13,40 @@ namespace MetroFramework.Demo.UDPNode
     /// </summary>
     class UDPNode : UDPSocketListener
     {
+        public const int outPort = 49100;
+        public const int inPort = 49101;
         /// <summary>
         /// Виртуальный UDP socket для прослушки порта на входящие сообщения и отправки сообщений с этого порта.
         /// </summary>
         private static UDPSocket udpSocket;
 
+        private MainForm mainForm;
+
+        private bool connectedToRobot = false;
+        
+        public UDPNode(MainForm mainForm):this(outPort,inPort)
+        {
+            this.mainForm = mainForm;
+        }
+
         /// <summary>
         /// Одновременно запускает прослушку порта.
         /// </summary>
+        /// <param name="outPort"></param>
         /// <param name="inPort"></param>
-        public UDPNode(int inPort)
+        private UDPNode(int outPort, int inPort)
         {
-            startNode(inPort);
+            startNode(outPort, inPort);
         }
 
         /// <summary>
         /// Запуск прослушки порта.
         /// </summary>
+        /// <param name="outPort">порт для отправки</param>
         /// <param name="inPort">порт для прослушки</param>
-        private void startNode(int inPort)
+        private void startNode(int outPort, int inPort)
         {
-            udpSocket = new UDPSocket(inPort, this);
+            udpSocket = new UDPSocket(outPort, inPort, this);
         }
 
         /// <summary>
@@ -40,6 +54,7 @@ namespace MetroFramework.Demo.UDPNode
         /// </summary>
         public void closeNode()
         {
+            setConnectedToRobot(false);
             udpSocket.closeNode();
         }
 
@@ -65,53 +80,89 @@ namespace MetroFramework.Demo.UDPNode
 
         public void onSocketCreationException(UDPSocket udpSocket, string excMsg)
         {
-            Program.writeLine("UDP socket error: cant create local socket =>\n=>" + excMsg);
+            MainForm.writeLine("UDP socket error: cant create local socket =>\n=>" + excMsg);
         }
 
         public void onSocketListeningClosed(UDPSocket udpSocket)
         {
-            Program.writeLine("UDP socket log: UDP listening is closed");
+            MainForm.writeLine("UDP socket log: UDP listening is closed");
         }
 
         public void onSocketListeningException(UDPSocket udpSocket)
         {
-            Program.writeLine("UDP socket error: UDP listening is closed UNEXPECTEDLY");
+            MainForm.writeLine("UDP socket error: UDP listening is closed UNEXPECTEDLY");
         }
 
         public void onSocketListeningReady(UDPSocket udpSocket)
         {
-            Program.writeLine("Listening started on localhost: " + udpSocket.getLocalPort() +
-                    " and on " + AppInfo.LocalIP + ": " + udpSocket.getLocalPort());
+            MainForm.writeLine("Listening started on localhost: " + udpSocket.getInLocalPort() + " and on " + "AppInfo.LocalIP" + ": " + udpSocket.getInLocalPort());
         }
 
         public void onSocketMessageIsNotSentCantFindRemoteURL(string outIP)
         {
-            Program.writeLine("UDP socket error: cant find remote URL to send");
+            MainForm.writeLine("UDP socket error: cant find remote URL to send");
         }
 
         public void onSocketMessageIsNotSentIOException()
         {
-            Program.writeLine("UDP socket error: cant send data, try again");
+            MainForm.writeLine("UDP socket error: cant send data, try again");
         }
 
         public void onSocketMessageIsNotSentLocalNodeIsClosed()
         {
-            Program.writeLine("UDP socket error: cant send message, please, start node");
+            MainForm.writeLine("UDP socket error: cant send message, please, start node");
         }
 
         public void onSocketMessageReceived(IPAddress authorIP, int authorPort, string receivedString)
         {
-            Program.writeLine("RECEIVED from " + authorIP + ":" + authorPort + "| data: " + receivedString);
+            MainForm.writeLine("RECEIVED from " + authorIP + ":" + authorPort + "| data: " + receivedString);
+            string[] splittedStream = receivedString.Split('?');
+            MainForm.writeLine("splittedStream: " + splittedStream[1]);
+            string[] splittedMessage = splittedStream[1].Split('|');
+
+            if (authorPort == outPort)
+            {
+                switch(splittedMessage[0])
+                {
+                    case "HiClientImARobotClapeyron":
+                        float hardVers = 0.00f;
+                        if ((splittedMessage[1] == "hardvers") 
+                            && float.TryParse(splittedMessage[2], NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out hardVers))
+                        {
+                            setConnectedToRobot(true);
+
+                            Dispatcher.Invoke(mainForm, () => { mainForm.setTelepresenceLabelConnectionStatus("connected"); });
+                            Dispatcher.Invoke(mainForm, () => { mainForm.setTelepresenceLabelConnectionStatusColor(System.Drawing.Color.LightGreen); });
+                            Dispatcher.Invoke(mainForm, () => { mainForm.setTelepresenceLabelLogLeftBottom("Connected"); });
+                            Dispatcher.Invoke(mainForm, () => { mainForm.setTelepresenceLabelHardwareVersion(hardVers.ToString(CultureInfo.InvariantCulture)); });
+                            Dispatcher.Invoke(mainForm, () => { mainForm.setSpinnerState(false); });
+                            Dispatcher.Invoke(mainForm, () => { mainForm.setTelepresenceLabelBattery("calculating.."); });
+                        }
+                        break;
+                    case "BAT":
+
+                        break;
+                }
+            }
         }
 
         public void onSocketMessageSent(IPAddress outIP, int outPort, Message data)
         {
-            Program.writeLine("UDP socket log: Message sent");
+            MainForm.writeLine("UDP socket log: Message sent");
         }
 
         public void onSocketReceivingException(UDPSocket udpSocket, string excMsg)
         {
-            Program.writeLine("UDP socket error: cant receive msg =>\n=>" + excMsg);
+            MainForm.writeLine("UDP socket error: cant receive msg =>\n=>" + excMsg);
+        }
+
+        private object locker = new object();
+        private void setConnectedToRobot(bool isConnected)
+        {
+            lock (locker)
+            {
+                connectedToRobot = isConnected;
+            }
         }
     }
 }

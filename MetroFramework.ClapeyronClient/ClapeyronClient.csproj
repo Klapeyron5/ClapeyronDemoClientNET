@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppInfo.cs" />
     <Compile Include="CV\ColorConverter.cs" />
     <Compile Include="CV\ColorInformation.cs" />
     <Compile Include="CV\ObjectColorData.cs" />
