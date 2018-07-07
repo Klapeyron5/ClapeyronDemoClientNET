@@ -8,6 +8,8 @@ using System.Xml;
 using MetroFramework.Forms;
 using ObjectRecognition;
 using MetroFramework.Demo.UDPNode;
+using System.Drawing.Drawing2D;
+using MetroFramework.ClapeyronClient.FastBitmap;
 
 namespace MetroFramework.ClapeyronClient
 {
@@ -25,10 +27,29 @@ namespace MetroFramework.ClapeyronClient
         const string default_client_port = "49100";
         const string default_cam_string = "http://192.168.8.1:8080/?action=snapshot";
 
+        public const int telepresencePictureBoxCameraWidth = 521;
+        public const int telepresencePictureBoxCameraHeight = 415;
+        public const int pictureBoxCenterX = (521 - 1) / 2;
+        public const int pictureBoxCenterY = (415 - 1) / 2;
+
         public MainForm()
         {
             InitializeComponent();
             setTelepresenceLabelSoftwareVersion(AppInfo.version.ToString(System.Globalization.CultureInfo.InvariantCulture));
+            
+            //test start
+            PixelMap testPixelMap = new PixelMap(521,415,0,0,0);
+            Bitmap testBmp = testPixelMap.GetBitmap();
+            Graphics graphics = Graphics.FromImage(testBmp);
+            try
+            {
+                Pen pen;
+                pen = new Pen(Color.Green);
+                graphics.DrawEllipse(pen, pictureBoxCenterX-50, pictureBoxCenterY-50, 101, 101);
+            }
+            catch (Exception ex) { }
+            drawBitmapOnTelepresencePictureBox(testBmp);
+            //test end
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -41,10 +62,10 @@ namespace MetroFramework.ClapeyronClient
          //   cmd = new Commander(new UdpClient(int.Parse(optionsMetroTextBoxRobotPort.Text)), new UdpClient(int.Parse(optionsMetroTextBoxClientPort.Text)), endPoint, this);
          //   cmd.init();
 
-            streamer = new ThreadRunner(new ThreadStart(stream));
-            streamer.Background(true);
-            streamer.Suspend();
-            ThreadRunner cleaner = new ThreadRunner(new ThreadStart(clearPictureBox));
+        //    streamer = new ThreadRunner(new ThreadStart(stream));
+        //    streamer.Background(true);
+         //   streamer.Suspend();
+        //    ThreadRunner cleaner = new ThreadRunner(new ThreadStart(clearPictureBox));
         }
 
         void loadOptions()
@@ -134,7 +155,6 @@ namespace MetroFramework.ClapeyronClient
                     Dispatcher.Invoke(this, () => { AnalizeImage((Bitmap)telepresencePictureBoxCamera.Image); });
                     ticker = 0;
                 }
-
             }
         }
 
@@ -195,8 +215,7 @@ namespace MetroFramework.ClapeyronClient
                 telepresenceLabelLogLeftBottom.Text = "Connecting..";
                 
                 udpNode = new UDPNode(this);
-                udpNode.sendNewString(optionsMetroTextBoxRobotIP.Text, UDPNode.inPort, "HiRobotClapeyronImAClient");
-
+                udpNode.sendNewString(optionsMetroTextBoxRobotIP.Text, UDPNode.inPort, "?HiRobotClapeyronImAClient?");
             //    cmd.send("INIT");
             }
             else
@@ -332,6 +351,14 @@ namespace MetroFramework.ClapeyronClient
         {
             Thread.Sleep(500);
             telepresencePictureBoxCamera.Image = new Bitmap(640, 480);
+        }
+        public void setOptionsLabelLogConnection(string value)
+        {
+            optionsLabelLogConnection.Text = value;
+        }
+        public string getOptionsMetroTextBoxWiFiNameValue()
+        {
+            return optionsMetroTextBoxWiFiName.Text;
         }
 
         // robot control via keyboard
@@ -659,6 +686,47 @@ namespace MetroFramework.ClapeyronClient
         public static void writeLine(String data)
         {
             Console.WriteLine(data);
+        }
+
+        public void drawBitmapOnTelepresencePictureBox(Bitmap bmp)
+        {
+            drawBitmapOnPictureBox(telepresencePictureBoxCamera, bmp);
+        }
+
+        /// <summary>
+        /// Рисует битман на данном pictureBox, при этом не размывает, если битмап меньше реальных размеров pictureBox'а
+        /// </summary>
+        /// <param name="pictureBox">на нем будет нарисован битмап</param>
+        /// <param name="bmp">битмап, который надо отрисовать</param>
+        private static void drawBitmapOnPictureBox(PictureBox pictureBox, Bitmap bmp)
+        {
+            if (pictureBox.Size != bmp.Size)
+            {
+                float zoom = 60.0f;
+                Bitmap zoomed = new Bitmap((int)(bmp.Width * zoom), (int)(bmp.Height * zoom));
+
+                using (Graphics g = Graphics.FromImage(zoomed))
+                {
+                    g.InterpolationMode = InterpolationMode.NearestNeighbor;
+                    g.PixelOffsetMode = PixelOffsetMode.Half;
+                    g.DrawImage(bmp, new Rectangle(Point.Empty, zoomed.Size));
+                }
+                pictureBox.Image = zoomed;
+            }
+            else
+                pictureBox.Image = bmp;
+        }
+
+        private void optionsMetroButtonConnect_Click(object sender, EventArgs e)
+        {
+            if ((udpNode != null)&&(udpNode.isConnectedToRobot()))
+            {
+                if ((optionsMetroTextBoxWiFiName.Text != "")&&(optionsMetroTextBoxPassword.Text != ""))
+                {
+                    setOptionsLabelLogConnection("Robot connecting...");
+                    udpNode.sendNewString(optionsMetroTextBoxRobotIP.Text, UDPNode.inPort, "?ConnectToTheAP|"+optionsMetroTextBoxWiFiName.Text+"|"+ optionsMetroTextBoxPassword.Text+"?");
+                }
+            }
         }
     }
 }

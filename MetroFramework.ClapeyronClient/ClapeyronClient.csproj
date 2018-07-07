@@ -71,6 +71,8 @@
     <Compile Include="CV\ObjectSignatureData.cs" />
     <Compile Include="CV\PaletteAnalyzer.cs" />
     <Compile Include="Dispatcher.cs" />
+    <Compile Include="FastBitmap\Pixel.cs" />
+    <Compile Include="FastBitmap\PixelMap.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -5938,6 +5938,9 @@
         AGBlcQgAAAAAALCu3/1D/xcqgGWqCfA6lgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="metroToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>176, 17</value>
+  </metadata>
   <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABLsAAAHbCAYAAAAjypgGAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAX
@@ -6457,7 +6460,4 @@
         kiRJkiRJkiRJkiRJi+n//b//D4NAvBCDLHDlAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="metroToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>176, 17</value>
-  </metadata>
 </root>

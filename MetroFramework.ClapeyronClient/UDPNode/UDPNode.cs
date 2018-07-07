@@ -139,6 +139,18 @@ namespace MetroFramework.Demo.UDPNode
                             Dispatcher.Invoke(mainForm, () => { mainForm.setTelepresenceLabelBattery("calculating.."); });
                         }
                         break;
+                    case "ConnectedToTheAP":
+                        if (splittedMessage[1] == mainForm.getOptionsMetroTextBoxWiFiNameValue())
+                        {
+                            Dispatcher.Invoke(mainForm, () => { mainForm.setOptionsLabelLogConnection("Connected. Robot IP is: "+splittedMessage[3]); });
+                        }
+                        break;
+                    case "CanNotConnectToTheAP":
+                        if (splittedMessage[1] == mainForm.getOptionsMetroTextBoxWiFiNameValue())
+                        {
+                            Dispatcher.Invoke(mainForm, () => { mainForm.setOptionsLabelLogConnection("Robot can't connect to the AP"); });
+                        }
+                        break;
                     case "BAT":
 
                         break;
@@ -162,6 +174,14 @@ namespace MetroFramework.Demo.UDPNode
             lock (locker)
             {
                 connectedToRobot = isConnected;
+            }
+        }
+
+        public bool isConnectedToRobot()
+        {
+            lock (locker)
+            {
+                return connectedToRobot;
             }
         }
     }

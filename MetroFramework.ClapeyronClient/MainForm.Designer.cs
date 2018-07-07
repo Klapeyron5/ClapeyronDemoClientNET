@@ -83,6 +83,13 @@
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.optionsMetroButtonConnect = new MetroFramework.Controls.MetroButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.optionsMetroTextBoxWiFiName = new MetroFramework.Controls.MetroTextBox();
+            this.optionsMetroTextBoxPassword = new MetroFramework.Controls.MetroTextBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.button3OptionsColor3 = new System.Windows.Forms.Button();
             this.button2OptionsColor2 = new System.Windows.Forms.Button();
@@ -112,6 +119,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.optionsLabelLogConnection = new System.Windows.Forms.Label();
             this.metroToolTip = new MetroFramework.Components.MetroToolTip();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -131,6 +139,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.metroTabPage2.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
@@ -656,12 +665,9 @@
             // telepresencePictureBoxCamera
             // 
             this.telepresencePictureBoxCamera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.telepresencePictureBoxCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.telepresencePictureBoxCamera.Dock = System.Windows.Forms.DockStyle.Fill;
             this.telepresencePictureBoxCamera.Location = new System.Drawing.Point(0, 0);
             this.telepresencePictureBoxCamera.Name = "telepresencePictureBoxCamera";
             this.telepresencePictureBoxCamera.Size = new System.Drawing.Size(521, 415);
-            this.telepresencePictureBoxCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.telepresencePictureBoxCamera.TabIndex = 0;
             this.telepresencePictureBoxCamera.TabStop = false;
             // 
@@ -677,8 +683,8 @@
             this.metroTabPage4.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage4.Name = "metroTabPage4";
             this.metroTabPage4.Size = new System.Drawing.Size(752, 481);
-            this.metroTabPage4.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroTabPage4.StyleManager = null;
+            this.metroTabPage4.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTabPage4.StyleManager = this.metroStyleManager;
             this.metroTabPage4.TabIndex = 3;
             this.metroTabPage4.Text = "CV";
             this.metroTabPage4.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -974,20 +980,138 @@
             // 
             this.tableLayoutPanel7.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel7.ColumnCount = 3;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.71276F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.12766F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel15, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel9, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.optionsLabelLogConnection, 0, 2);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowCount = 3;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(752, 481);
             this.tableLayoutPanel7.TabIndex = 2;
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 3;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel15.Controls.Add(this.label11, 0, 1);
+            this.tableLayoutPanel15.Controls.Add(this.label16, 0, 3);
+            this.tableLayoutPanel15.Controls.Add(this.optionsMetroButtonConnect, 0, 8);
+            this.tableLayoutPanel15.Controls.Add(this.label7, 0, 5);
+            this.tableLayoutPanel15.Controls.Add(this.optionsMetroTextBoxWiFiName, 0, 4);
+            this.tableLayoutPanel15.Controls.Add(this.optionsMetroTextBoxPassword, 0, 6);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 230);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 10;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(246, 230);
+            this.tableLayoutPanel15.TabIndex = 36;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.ForeColor = System.Drawing.SystemColors.Window;
+            this.label11.Location = new System.Drawing.Point(3, 20);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(156, 19);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Connect robot to the AP:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.label16.Location = new System.Drawing.Point(3, 65);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(103, 19);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Wi-Fi net name:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // optionsMetroButtonConnect
+            // 
+            this.optionsMetroButtonConnect.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.optionsMetroButtonConnect.Highlight = false;
+            this.optionsMetroButtonConnect.Location = new System.Drawing.Point(3, 193);
+            this.optionsMetroButtonConnect.Name = "optionsMetroButtonConnect";
+            this.optionsMetroButtonConnect.Size = new System.Drawing.Size(186, 24);
+            this.optionsMetroButtonConnect.Style = MetroFramework.MetroColorStyle.Orange;
+            this.optionsMetroButtonConnect.StyleManager = this.metroStyleManager;
+            this.optionsMetroButtonConnect.TabIndex = 6;
+            this.optionsMetroButtonConnect.Text = "Connect";
+            this.optionsMetroButtonConnect.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.optionsMetroButtonConnect.Click += new System.EventHandler(this.optionsMetroButtonConnect_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.label7.Location = new System.Drawing.Point(3, 125);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 19);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Password";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // optionsMetroTextBoxWiFiName
+            // 
+            this.optionsMetroTextBoxWiFiName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.optionsMetroTextBoxWiFiName.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.optionsMetroTextBoxWiFiName.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.optionsMetroTextBoxWiFiName.Location = new System.Drawing.Point(3, 93);
+            this.optionsMetroTextBoxWiFiName.Multiline = false;
+            this.optionsMetroTextBoxWiFiName.Name = "optionsMetroTextBoxWiFiName";
+            this.optionsMetroTextBoxWiFiName.SelectedText = "";
+            this.optionsMetroTextBoxWiFiName.Size = new System.Drawing.Size(186, 24);
+            this.optionsMetroTextBoxWiFiName.Style = MetroFramework.MetroColorStyle.Orange;
+            this.optionsMetroTextBoxWiFiName.StyleManager = this.metroStyleManager;
+            this.optionsMetroTextBoxWiFiName.TabIndex = 4;
+            this.optionsMetroTextBoxWiFiName.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.optionsMetroTextBoxWiFiName.UseStyleColors = false;
+            // 
+            // optionsMetroTextBoxPassword
+            // 
+            this.optionsMetroTextBoxPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.optionsMetroTextBoxPassword.FontSize = MetroFramework.MetroTextBoxSize.Small;
+            this.optionsMetroTextBoxPassword.FontWeight = MetroFramework.MetroTextBoxWeight.Regular;
+            this.optionsMetroTextBoxPassword.Location = new System.Drawing.Point(3, 153);
+            this.optionsMetroTextBoxPassword.Multiline = false;
+            this.optionsMetroTextBoxPassword.Name = "optionsMetroTextBoxPassword";
+            this.optionsMetroTextBoxPassword.SelectedText = "";
+            this.optionsMetroTextBoxPassword.Size = new System.Drawing.Size(186, 24);
+            this.optionsMetroTextBoxPassword.Style = MetroFramework.MetroColorStyle.Orange;
+            this.optionsMetroTextBoxPassword.StyleManager = this.metroStyleManager;
+            this.optionsMetroTextBoxPassword.TabIndex = 6;
+            this.optionsMetroTextBoxPassword.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.optionsMetroTextBoxPassword.UseStyleColors = false;
             // 
             // tableLayoutPanel9
             // 
@@ -1003,7 +1127,7 @@
             this.tableLayoutPanel9.Controls.Add(this.label24, 0, 3);
             this.tableLayoutPanel9.Controls.Add(this.button1OptionsColor1, 1, 3);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(225, 0);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(246, 0);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 7;
@@ -1014,7 +1138,7 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(225, 240);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(204, 230);
             this.tableLayoutPanel9.TabIndex = 35;
             // 
             // button3OptionsColor3
@@ -1140,7 +1264,7 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(225, 240);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(246, 230);
             this.tableLayoutPanel8.TabIndex = 34;
             // 
             // optionsMetroTextBoxCamURL
@@ -1264,13 +1388,13 @@
             this.optionsMetroTextBoxRobotIP.Location = new System.Drawing.Point(103, 63);
             this.optionsMetroTextBoxRobotIP.Multiline = false;
             this.optionsMetroTextBoxRobotIP.Name = "optionsMetroTextBoxRobotIP";
-            this.optionsMetroTextBoxRobotIP.Text = MainForm.default_robot_ip;
             this.optionsMetroTextBoxRobotIP.SelectedText = "";
             this.optionsMetroTextBoxRobotIP.Size = new System.Drawing.Size(94, 24);
             this.optionsMetroTextBoxRobotIP.Style = MetroFramework.MetroColorStyle.Orange;
             this.optionsMetroTextBoxRobotIP.StyleManager = this.metroStyleManager;
             this.optionsMetroTextBoxRobotIP.TabIndex = 4;
             this.optionsMetroTextBoxRobotIP.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroToolTip.SetToolTip(this.optionsMetroTextBoxRobotIP, "192.168.4.1");
             this.optionsMetroTextBoxRobotIP.UseStyleColors = false;
             // 
             // optionsMetroButtonDefaul
@@ -1447,6 +1571,19 @@
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel1.UseStyleColors = true;
             // 
+            // optionsLabelLogConnection
+            // 
+            this.optionsLabelLogConnection.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.optionsLabelLogConnection.AutoSize = true;
+            this.optionsLabelLogConnection.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.optionsLabelLogConnection.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.optionsLabelLogConnection.Location = new System.Drawing.Point(3, 461);
+            this.optionsLabelLogConnection.Name = "optionsLabelLogConnection";
+            this.optionsLabelLogConnection.Size = new System.Drawing.Size(187, 19);
+            this.optionsLabelLogConnection.TabIndex = 7;
+            this.optionsLabelLogConnection.Text = "Robot is only in AP mode now";
+            this.optionsLabelLogConnection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // metroToolTip
             // 
             this.metroToolTip.Style = MetroFramework.MetroColorStyle.Blue;
@@ -1493,6 +1630,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.metroTabPage2.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.tableLayoutPanel15.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
@@ -1592,6 +1732,14 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label16;
+        private Controls.MetroButton optionsMetroButtonConnect;
+        private System.Windows.Forms.Label label7;
+        private Controls.MetroTextBox optionsMetroTextBoxWiFiName;
+        private Controls.MetroTextBox optionsMetroTextBoxPassword;
+        private System.Windows.Forms.Label optionsLabelLogConnection;
     }
 }
 
