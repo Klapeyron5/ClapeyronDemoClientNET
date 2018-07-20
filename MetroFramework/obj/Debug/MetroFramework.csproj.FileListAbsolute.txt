@@ -6,3 +6,10 @@ C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework\obj\Debug\M
 C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework\obj\Debug\MetroFramework.dll
 C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework\obj\Debug\MetroFramework.pdb
 C:\Adocuments\Library\Clapeyron_ind\ClapeyronClientVS\MetroFramework\obj\Debug\MetroFramework.csprojResolveAssemblyReference.cache
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework\bin\Debug\MetroFramework.dll
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework\bin\Debug\MetroFramework.pdb
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework\obj\Debug\MetroFramework.csprojResolveAssemblyReference.cache
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework\obj\Debug\MetroFramework.Properties.Resources.resources
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework\obj\Debug\MetroFramework.csproj.GenerateResource.Cache
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework\obj\Debug\MetroFramework.dll
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework\obj\Debug\MetroFramework.pdb

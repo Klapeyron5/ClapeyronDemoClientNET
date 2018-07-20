@@ -225,6 +225,7 @@ namespace MetroFramework.ClapeyronClient
                 telepresenceLabelConnectionStatus.Text = "not connected";
                 telepresenceLabelConnectionStatus.ForeColor = Color.LightSalmon;
 
+                udpNode.sendNewString(optionsMetroTextBoxRobotIP.Text, UDPNode.inPort, "?ByeRobotClapeyron?");
                 udpNode.closeNode();
           //      cmd.send("WASD_OFF");
           //      cmd.send("STREAM_OFF");
@@ -238,7 +239,8 @@ namespace MetroFramework.ClapeyronClient
         {
             if (telepresenceMetroToggleWASD.Checked)
             {
-          //      cmd.send("WASD_ON");
+                udpNode.sendNewString(optionsMetroTextBoxRobotIP.Text, UDPNode.inPort, "?Move|Start?");
+                //      cmd.send("WASD_ON");
                 telepresenceLabelLogLeftBottom.Text = "WASD on";
                 panel2.Visible = true;
                 panel3.Visible = true;
@@ -247,7 +249,8 @@ namespace MetroFramework.ClapeyronClient
             }
             else
             {
-          //      cmd.send("WASD_OFF");
+                udpNode.sendNewString(optionsMetroTextBoxRobotIP.Text, UDPNode.inPort, "?Move|Stop?");
+                //      cmd.send("WASD_OFF");
                 telepresenceLabelLogLeftBottom.Text = "WASD off";
                 panel2.Visible = false;
                 panel3.Visible = false;

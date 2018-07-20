@@ -19,6 +19,6 @@ C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.Clapey
 C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\obj\Debug\MetroFramework.ClapeyronClient.MainForm.resources
 C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\obj\Debug\MetroFramework.Demo.Properties.Resources.resources
 C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\obj\Debug\ClapeyronClient.csproj.GenerateResource.Cache
-C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\obj\Debug\ClapeyronClient.csproj.CoreCompileInputs.cache
 C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\obj\Debug\MetroFramework.Demo.exe
 C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\obj\Debug\MetroFramework.Demo.pdb
+C:\Adocuments\Library\Clapeyron_ind\ClapeyronDemoClientNET\MetroFramework.ClapeyronClient\obj\Debug\ClapeyronClient.csproj.CoreCompileInputs.cache

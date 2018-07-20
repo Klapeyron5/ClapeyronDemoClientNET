@@ -54,7 +54,6 @@ namespace MetroFramework.Demo.UDPNode
         /// </summary>
         public void closeNode()
         {
-            setConnectedToRobot(false);
             udpSocket.closeNode();
         }
 
@@ -66,6 +65,7 @@ namespace MetroFramework.Demo.UDPNode
         /// <param name="data">строка для отправки</param>
         public void sendNewString(String outIP, int outPort, String data)
         {
+            if (isConnectedToRobot())
             try
             {
                 IPAddress hostAddr = IPAddress.Parse(outIP);
@@ -85,6 +85,7 @@ namespace MetroFramework.Demo.UDPNode
 
         public void onSocketListeningClosed(UDPSocket udpSocket)
         {
+            setConnectedToRobot(false);
             MainForm.writeLine("UDP socket log: UDP listening is closed");
         }
 
@@ -95,6 +96,7 @@ namespace MetroFramework.Demo.UDPNode
 
         public void onSocketListeningReady(UDPSocket udpSocket)
         {
+            setConnectedToRobot(true);
             MainForm.writeLine("Listening started on localhost: " + udpSocket.getInLocalPort() + " and on " + "AppInfo.LocalIP" + ": " + udpSocket.getInLocalPort());
         }
 

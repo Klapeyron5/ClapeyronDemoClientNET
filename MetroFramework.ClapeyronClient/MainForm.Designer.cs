@@ -110,6 +110,7 @@
             this.optionsMetroTextBoxRobotIP = new MetroFramework.Controls.MetroTextBox();
             this.optionsMetroButtonDefaul = new MetroFramework.Controls.MetroButton();
             this.optinsMetroButtonSave = new MetroFramework.Controls.MetroButton();
+            this.optionsLabelLogConnection = new System.Windows.Forms.Label();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -119,7 +120,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.optionsLabelLogConnection = new System.Windows.Forms.Label();
             this.metroToolTip = new MetroFramework.Components.MetroToolTip();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -160,7 +160,7 @@
             this.metroTabControl1.FontWeight = MetroFramework.MetroTabControlWeight.Light;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 2;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(760, 520);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTabControl1.StyleManager = this.metroStyleManager;
@@ -1425,6 +1425,19 @@
             this.optinsMetroButtonSave.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.optinsMetroButtonSave.Click += new System.EventHandler(this.optionsMetroButtonSave_Click);
             // 
+            // optionsLabelLogConnection
+            // 
+            this.optionsLabelLogConnection.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.optionsLabelLogConnection.AutoSize = true;
+            this.optionsLabelLogConnection.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.optionsLabelLogConnection.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.optionsLabelLogConnection.Location = new System.Drawing.Point(3, 461);
+            this.optionsLabelLogConnection.Name = "optionsLabelLogConnection";
+            this.optionsLabelLogConnection.Size = new System.Drawing.Size(187, 19);
+            this.optionsLabelLogConnection.TabIndex = 7;
+            this.optionsLabelLogConnection.Text = "Robot is only in AP mode now";
+            this.optionsLabelLogConnection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // metroTabPage3
             // 
             this.metroTabPage3.Controls.Add(this.tableLayoutPanel3);
@@ -1570,19 +1583,6 @@
             this.metroLabel1.Text = "clapeyronrobotics.com";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroLabel1.UseStyleColors = true;
-            // 
-            // optionsLabelLogConnection
-            // 
-            this.optionsLabelLogConnection.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.optionsLabelLogConnection.AutoSize = true;
-            this.optionsLabelLogConnection.Font = new System.Drawing.Font("Segoe UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.optionsLabelLogConnection.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.optionsLabelLogConnection.Location = new System.Drawing.Point(3, 461);
-            this.optionsLabelLogConnection.Name = "optionsLabelLogConnection";
-            this.optionsLabelLogConnection.Size = new System.Drawing.Size(187, 19);
-            this.optionsLabelLogConnection.TabIndex = 7;
-            this.optionsLabelLogConnection.Text = "Robot is only in AP mode now";
-            this.optionsLabelLogConnection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroToolTip
             // 
